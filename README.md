@@ -1,7 +1,5 @@
 # Thushari Vision House - Hospital Management System
 
-![TVH Healthcare](public/assets/images/logo.png)
-
 ## 🏥 Project Overview
 
 TVH Hospital Management System is a comprehensive web-based application designed to streamline healthcare operations, improve patient care, and optimize administrative workflows. This project was developed as part of the Information Systems community project at Sabaragamuwa University of Sri Lanka.
@@ -81,13 +79,13 @@ mv hospital-management-system /path/to/xampp/htdocs/
 http://localhost/hospital/public/index.php
 ```
 
-## 📸 Screenshots
+<!-- ## 📸 Screenshots
 
 <div style="display: flex; justify-content: space-between;">
     <img src="path/to/screenshot1.png" alt="Homepage" width="30%">
     <img src="path/to/screenshot2.png" alt="Dashboard" width="30%">
     <img src="path/to/screenshot3.png" alt="Appointment" width="30%">
-</div>
+</div> -->
 
 ## 👥 User Roles & Access
 
