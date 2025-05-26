@@ -1,0 +1,90 @@
+/* Additional Header Styling */
+
+/* Remove bottom margin/padding from header */
+#menu-jk {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  font-size: 0 !important; /* Remove any potential whitespace */
+}
+
+/* Reset header bottom margins and paddings */
+header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+  font-size: 0 !important; /* Remove whitespace */
+}
+
+/* Ensure all elements in the header align on the same line */
+.header-nav .row {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: initial; /* Reset font size for children */
+}
+
+/* Adjust spacing for the logo */
+.header-nav .col-lg-2.col-md-3.col-sm-12 {
+  display: flex;
+  align-items: center;
+}
+
+/* Center the navigation menu */
+.nav-item ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Align menu items vertically */
+.nav-item ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Position the appointment button correctly */
+.appoint {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Ensure all elements have the same height */
+.header-nav .row > div {
+  min-height: 73px;
+  display: flex;
+  align-items: center;
+}
+
+/* Fix for smaller screens */
+@media (max-width: 992px) {
+  .nav-item ul {
+    justify-content: center;
+  }
+
+  .appoint {
+    padding-right: 10px;
+  }
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 768px) {
+  #menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item ul {
+    flex-direction: column;
+  }
+
+  .mobile-appointment {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,104 @@
+/* Special CSS to fix header-slider gap */
+
+/* Fix the gap between header and slider */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  display: block;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+#menu-jk {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.header-nav {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.slider-detail {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: relative;
+  top: -1px; /* Pull up the slider */
+}
+
+/* Fix header box-shadow to appear only at top */
+header {
+  box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 -2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Ensure no white space */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Fix height issues */
+.slider-detail .carousel-item {
+  margin-top: 0 !important;
+}
+
+/* Add negative margin to force removal of any gap */
+.slider-detail {
+  margin-top: -2px !important;
+}
+
+/* Fix carousel height to fit in one page view */
+.carousel-item img {
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+/* Make sure carousel captions and buttons are visible */
+.carousel-caption {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 10 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center !important;
+  padding: 0 15% !important;
+}
+
+/* Style buttons to make them stand out */
+.carousel-caption .btn {
+  display: inline-block !important;
+  margin: 5px !important;
+  padding: 10px 20px !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+  transition: all 0.3s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.carousel-caption .btn-success {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.carousel-caption .btn-outline-light {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}

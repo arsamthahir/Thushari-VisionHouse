@@ -1,0 +1,373 @@
+/* Homepage Specific Styles for Thushari Vision House */
+
+/* Note: Carousel caption styles have been moved to enhanced-sections.css for better organization and enhanced design */
+
+/* Welcome Section */
+.welcome-section {
+  padding: 70px 0;
+  background: #f8f9fa;
+}
+
+.welcome-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-bottom: 4px solid #28a745;
+}
+
+.welcome-box h3 {
+  color: #28a745;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.welcome-box h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #28a745;
+}
+
+/* Features Section */
+.feature-box {
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  border-bottom: 3px solid #28a745;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-box:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #28a745;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box:hover:before {
+  top: 0;
+}
+
+.feature-box i {
+  font-size: 40px;
+  color: #28a745;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover i {
+  transform: scale(1.1);
+}
+
+.feature-box h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Stats Counter */
+.stats-counter {
+  background: linear-gradient(rgba(40, 167, 69, 0.85), rgba(40, 167, 69, 0.85)),
+    url("../images/why.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0;
+  color: white;
+  background-attachment: fixed;
+}
+
+.counter-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.counter-box .counter {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.counter-box h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.counter-box h5:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: white;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 70px 0;
+  background-color: #f8f9fa;
+}
+
+.testimonial-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card:before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 60px;
+  color: rgba(40, 167, 69, 0.1);
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  padding: 30px 20px 20px 20px;
+  font-style: italic;
+  color: #666;
+}
+
+.testimonial-author {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.testimonial-author h5 {
+  margin-bottom: 5px;
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* Call to Action */
+.cta-section {
+  background-color: #28a745;
+  color: white;
+  padding: 50px 0;
+}
+
+.cta-section h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cta-section p {
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.cta-section .btn-light {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.cta-section .btn-light:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* Doctors Section */
+.our-doctors {
+  padding: 70px 0;
+  background-color: white;
+}
+
+.doctor-box {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.doctor-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.doctor-box:hover img {
+  transform: scale(1.05);
+}
+
+.doctor-info {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-top: 3px solid #28a745;
+}
+
+.doctor-info h5 {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.doctor-info span {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.doctor-social {
+  margin-top: 15px;
+}
+
+.doctor-social a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #28a745;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.doctor-social a:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Department Section */
+.department-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.department-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.department-icon {
+  background-color: #28a745;
+  color: white;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.department-box:hover .department-icon {
+  transform: rotateY(180deg);
+}
+
+.department-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.department-content h5 {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Footer Enhancement */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 70px 0 40px;
+}
+
+.footer h2 {
+  color: #28a745;
+  font-size: 22px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #28a745;
+}
+
+.footer p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.footer .link-list a {
+  color: #ccc;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.footer .link-list a:hover {
+  color: #28a745;
+  padding-left: 10px;
+}
+
+.footer address {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.copy {
+  background-color: #222;
+  padding: 15px 0;
+  color: #999;
+}

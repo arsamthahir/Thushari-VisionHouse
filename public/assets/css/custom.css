@@ -1,0 +1,279 @@
+/* Custom CSS for Hospital Management System */
+
+/* Header Styles */
+.header-nav {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #28a745;
+  padding: 5px 0;
+}
+
+.header-nav .row {
+  align-items: center; /* Align items vertically */
+  min-height: 60px; /* Set a minimum height for the row */
+  display: flex; /* Ensure it uses flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.header-nav .container {
+  max-width: 1200px; /* Set max width for better control */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header on scroll styling */
+.header-fixed {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 3px 0;
+}
+
+/* Logo Styles */
+.header-nav .col-lg-2.col-md-3.col-sm-12 {
+  font-family: "PT Sans", sans-serif;
+  color: #28a745 !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding-left: 15px;
+}
+
+.header-nav .col-lg-2.col-md-3.col-sm-12:after {
+  content: "Healthcare";
+  position: absolute;
+  font-size: 10px;
+  color: #555;
+  bottom: 15px;
+  left: 17px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation Menu Styling */
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  flex-wrap: nowrap; /* Prevent wrapping to next line */
+  white-space: nowrap; /* Prevent text wrapping */
+  height: 100%; /* Full height */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.nav-item ul li {
+  display: inline-block;
+  margin: 0 8px; /* Increase margins slightly */
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item ul li a {
+  color: #333;
+  font-weight: 600;
+  padding: 5px 4px; /* Reduce vertical padding */
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  font-size: 14px; /* Slightly smaller font size */
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Hover line effect */
+.nav-item ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #28a745;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item ul li a:hover:after,
+.nav-item ul li a.active:after {
+  width: 70%;
+}
+
+.nav-item ul li a:hover,
+.nav-item ul li a.active {
+  color: #28a745;
+}
+
+/* Appointment Button Styling */
+.appoint {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center; /* Align vertically center */
+  height: 100%; /* Match the height of the parent */
+  padding-right: 15px; /* Add some right padding */
+}
+
+.btn-appointment {
+  border-radius: 25px;
+  padding: 6px 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #28a745;
+  border: 2px solid #28a745;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 13px;
+}
+
+.btn-appointment i {
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-appointment:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btn-appointment:hover {
+  background-color: #218838;
+  border-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-appointment:hover:before {
+  left: 100%;
+}
+
+.btn-appointment:hover i {
+  transform: rotate(10deg);
+}
+
+/* Mobile Menu Toggle */
+.small-menu {
+  color: #28a745;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.small-menu:hover {
+  color: #218838;
+  transform: rotate(90deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .nav-item ul li {
+    margin: 0 5px;
+  }
+
+  .nav-item ul li a {
+    font-size: 13px;
+    padding: 8px 3px;
+  }
+
+  .btn-appointment {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* Adjust the menu spacing */
+  .nav-item ul {
+    justify-content: center; /* Center menu items */
+  }
+
+  /* Ensure the appointment button is aligned properly */
+  .col-lg-2.d-none.d-lg-block.appoint {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .appoint {
+    display: none; /* Hide appointment button on mobile */
+  }
+
+  #menu {
+    background: white;
+    position: absolute;
+    width: 94%;
+    left: 3%;
+    top: 100%;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-radius: 5px;
+    border-top: 2px solid #28a745;
+    display: block; /* Override flex display for mobile */
+  }
+
+  .nav-item ul {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .nav-item ul li {
+    margin: 5px 0;
+    display: block;
+    text-align: center;
+    height: auto;
+  }
+  .nav-item ul li a {
+    display: block;
+    padding: 8px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: auto;
+  }
+
+  .nav-item ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Mobile appointment button styling */
+  .mobile-appointment {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+
+  .mobile-appointment .btn-appointment {
+    width: 100%;
+    justify-content: center;
+  }
+}
