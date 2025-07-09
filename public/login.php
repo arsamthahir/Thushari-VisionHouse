@@ -17,7 +17,7 @@ include_once('../src/hms/include/config.php');
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -75,7 +75,8 @@ include_once('../src/hms/include/config.php');
         <div id="nav-head" class="header-nav">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-3 col-sm-12" style="color:#28a745;font-weight:bold; font-size:32px; margin-top: 0 !important;">TVH
+                    <div class="col-lg-2 col-md-3 col-sm-12">
+                        <div class="logo">TVH</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
@@ -87,11 +88,11 @@ include_once('../src/hms/include/config.php');
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php" class="active">Logins</a></li>  
                         </ul>                        <div class="mobile-appointment d-md-none">
-                            <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                            <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
                     <div class="col-lg-2 d-none d-lg-block appoint">
-                        <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                        <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                     </div>
                 </div>
             </div>

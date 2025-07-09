@@ -18,15 +18,15 @@ echo "<script>window.location.href ='index.php'</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Thushari Vision House - A premium hospital providing expert healthcare services including cardiology, neurology, and general medicine. Book appointments online and access quality healthcare.">
     <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, cardiology, neurology, patient care">
-    <title>Thushari Vision House - Hospital Management System</title>    <link rel="shortcut icon" href="assets/images/fav.jpg"><link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Thushari Vision House - Hospital Management System</title>    <link rel="shortcut icon" href="assets/images/fav.jpg">    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/home.css" />    <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/enhanced-sections.css" />    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/slider-fixes.css" />
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">    <style>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"><style>
         /* Critical inline style to fix gap */
         header { margin: 0 !important; padding: 0 !important; font-size: 0 !important; }
         .slider-detail { margin-top: -2px !important; }
@@ -53,7 +53,8 @@ echo "<script>window.location.href ='index.php'</script>";
     <body>    <!-- ################# Header Starts Here#######################--->
       <header id="menu-jk">
         <div id="nav-head" class="header-nav">
-            <div class="container">                <div class="row align-items-center">                    <div class="col-lg-2 col-md-3 col-sm-12" style="color:#28a745;font-weight:bold; font-size:32px; margin-top: 0 !important;">TVH
+            <div class="container">                <div class="row align-items-center">                    <div class="col-lg-2 col-md-3 col-sm-12">
+                        <div class="logo">TVH</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
@@ -66,11 +67,11 @@ echo "<script>window.location.href ='index.php'</script>";
                             <li><a href="login.php">Logins</a></li>  
                         </ul>
                         <div class="mobile-appointment d-md-none">
-                            <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                            <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
                     <div class="col-lg-2 d-none d-lg-block appoint">
-                        <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                        <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                     </div>
                 </div>
 

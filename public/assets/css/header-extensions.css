@@ -1,90 +1,272 @@
-/* Additional Header Styling */
+/* Material UI Inspired Header */
 
-/* Remove bottom margin/padding from header */
+/* Header container */
 #menu-jk {
   margin: 0 !important;
   padding: 0 !important;
-  border-bottom: 0 !important;
-  font-size: 0 !important; /* Remove any potential whitespace */
+  border-bottom: none !important;
+  font-size: 0 !important;
+  position: relative;
 }
 
-/* Reset header bottom margins and paddings */
 header {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  border-bottom: 0 !important;
-  font-size: 0 !important; /* Remove whitespace */
+  border-bottom: none !important;
+  font-size: 0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
 }
 
-/* Ensure all elements in the header align on the same line */
+/* Header Navigation */
+.header-nav {
+  background: #ffffff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: initial !important;
+  min-height: 70px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.header-nav .container {
+  padding: 0 20px !important;
+}
+
 .header-nav .row {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   margin: 0 !important;
   padding: 0 !important;
-  font-size: initial; /* Reset font size for children */
+  font-size: initial !important;
+  min-height: 70px !important;
 }
 
-/* Adjust spacing for the logo */
+/* Logo section */
 .header-nav .col-lg-2.col-md-3.col-sm-12 {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 70px !important;
 }
 
-/* Center the navigation menu */
+.logo {
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #28a745 !important;
+  letter-spacing: 1px !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+/* Navigation Menu */
+.nav-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 70px !important;
+}
+
 .nav-item ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
 }
 
-/* Align menu items vertically */
 .nav-item ul li {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  height: 70px !important;
+  position: relative !important;
+  float: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Position the appointment button correctly */
+.nav-item ul li a {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 20px !important;
+  height: 70px !important;
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #424242 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.nav-item ul li a:hover,
+.nav-item ul li a.active {
+  color: #28a745 !important;
+  background: transparent !important;
+}
+
+.nav-item ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #28a745;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item ul li a:hover::after,
+.nav-item ul li a.active::after {
+  width: 80%;
+}
+
+/* Appointment Button */
 .appoint {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  height: 70px !important;
+  padding: 0 !important;
 }
 
-/* Ensure all elements have the same height */
-.header-nav .row > div {
-  min-height: 73px;
-  display: flex;
-  align-items: center;
+.btn-appointment {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 24px !important;
+  background: #28a745 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
 }
 
-/* Fix for smaller screens */
+.btn-appointment:hover {
+  background: #218838 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4) !important;
+}
+
+.btn-appointment i {
+  font-size: 14px !important;
+}
+
+/* Mobile menu button */
+.small-menu {
+  float: right !important;
+  color: #28a745 !important;
+  font-size: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: color 0.3s ease !important;
+}
+
+.small-menu:hover {
+  color: #218838 !important;
+}
+
+/* Responsive Design */
 @media (max-width: 992px) {
-  .nav-item ul {
-    justify-content: center;
+  .header-nav .container {
+    padding: 0 15px !important;
   }
 
-  .appoint {
-    padding-right: 10px;
+  .nav-item ul {
+    justify-content: center !important;
+  }
+
+  .btn-appointment {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
   }
 }
 
-/* Mobile menu adjustments */
 @media (max-width: 768px) {
+  .header-nav .row {
+    min-height: 60px !important;
+  }
+
+  .header-nav .col-lg-2.col-md-3.col-sm-12 {
+    font-size: 24px !important;
+    height: 60px !important;
+  }
+
+  .small-menu {
+    font-size: 24px !important;
+  }
+
   #menu {
-    flex-direction: column;
-    align-items: center;
+    background: #ffffff !important;
+    border-top: 1px solid #e0e0e0 !important;
+    padding: 20px 0 !important;
+    margin-top: 0 !important;
   }
 
   .nav-item ul {
-    flex-direction: column;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .nav-item ul li {
+    width: 100% !important;
+    height: auto !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+  }
+
+  .nav-item ul li:last-child {
+    border-bottom: none !important;
+  }
+
+  .nav-item ul li a {
+    width: 100% !important;
+    height: 50px !important;
+    justify-content: center !important;
+    padding: 0 20px !important;
+  }
+
+  .nav-item ul li a::after {
+    display: none !important;
   }
 
   .mobile-appointment {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
+    margin-top: 20px !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .mobile-appointment .btn-appointment {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 15px 24px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav .container {
+    padding: 0 10px !important;
+  }
+
+  .header-nav .col-lg-2.col-md-3.col-sm-12 {
+    font-size: 20px !important;
   }
 }
