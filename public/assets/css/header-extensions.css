@@ -29,45 +29,67 @@ header {
 }
 
 .header-nav .container {
-  padding: 0 20px !important;
+  padding: 0 15px !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .header-nav .row {
   display: flex !important;
   align-items: center !important;
+  justify-content: space-between !important;
   margin: 0 !important;
   padding: 0 !important;
-  font-size: initial !important;
   min-height: 70px !important;
+  width: 100% !important;
 }
 
 /* Logo section */
-.header-nav .col-lg-2.col-md-3.col-sm-12 {
+.header-nav .col-lg-3.col-md-3.col-sm-12 {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
-  padding: 0 !important;
+  justify-content: flex-start !important;
+  padding: 0 20px 0 0 !important;
   margin: 0 !important;
   height: 70px !important;
+  min-width: 220px !important;
 }
 
 .logo {
   font-family: "PT Sans", sans-serif !important;
-  font-size: 28px !important;
+  font-size: 26px !important;
   font-weight: 700 !important;
   color: #28a745 !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 0.5px !important;
   text-decoration: none !important;
   transition: color 0.3s ease !important;
   cursor: pointer !important;
+  white-space: nowrap !important;
+  margin-right: 25px !important;
+  flex-shrink: 0 !important;
 }
 
 /* Navigation Menu */
+.header-nav .col-lg-6.col-md-9 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 20px !important;
+  flex-grow: 1 !important;
+  text-align: center !important;
+}
+
 .nav-item {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   height: 70px !important;
+  padding: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 .nav-item ul {
@@ -77,7 +99,8 @@ header {
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  gap: 0 !important;
+  gap: 5px !important;
+  width: 100% !important;
 }
 
 .nav-item ul li {
@@ -88,23 +111,24 @@ header {
   float: none !important;
   border: none !important;
   padding: 0 !important;
-  margin: 0 !important;
+  margin: 0 5px !important;
 }
 
 .nav-item ul li a {
   display: flex !important;
   align-items: center !important;
-  padding: 0 20px !important;
+  padding: 0 15px !important;
   height: 70px !important;
   font-family: "PT Sans", sans-serif !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
   color: #424242 !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
   position: relative !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+  letter-spacing: 0.8px !important;
+  justify-content: center !important;
 }
 
 .nav-item ul li a:hover,
@@ -128,34 +152,54 @@ header {
 .nav-item ul li a:hover::after,
 .nav-item ul li a.active::after {
   width: 80%;
+  background: #28a745 !important;
 }
 
 /* Appointment Button */
+.header-nav .col-lg-3 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  padding: 0 5px 0 15px !important;
+  min-width: 200px !important;
+  flex-shrink: 0 !important;
+  max-width: 250px !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
 .appoint {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
   height: 70px !important;
-  padding: 0 !important;
+  padding: 0 10px 0 0 !important;
+  margin-left: auto !important;
+  width: 100% !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
 }
 
 .btn-appointment {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 8px !important;
-  padding: 12px 24px !important;
+  gap: 6px !important;
+  padding: 8px 16px !important;
   background: #28a745 !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 8px !important;
   font-family: "PT Sans", sans-serif !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
+  white-space: nowrap !important;
+  margin-right: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 .btn-appointment:hover {
@@ -183,19 +227,174 @@ header {
   color: #218838 !important;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .header-nav .container {
-    padding: 0 15px !important;
-  }
+/* Force navigation centering on all pages */
+#menu.nav-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+}
 
-  .nav-item ul {
+#menu.nav-item ul {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  list-style: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  gap: 5px !important;
+  width: auto !important;
+  text-align: center !important;
+}
+
+#menu.nav-item ul li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 70px !important;
+  position: relative !important;
+  float: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 5px !important;
+}
+
+#menu.nav-item ul li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 15px !important;
+  height: 70px !important;
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #424242 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  text-align: center !important;
+}
+
+/* Specific targeting for different page IDs */
+.header-nav #menu ul {
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.header-nav .nav-item ul {
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* Override conflicting styles from style.css */
+header .header-nav .nav-item ul li {
+  float: none !important;
+  font-family: "PT Sans", sans-serif !important;
+  font-size: 14px !important;
+  padding: 0 !important;
+  margin: 0 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 70px !important;
+  position: relative !important;
+  border: none !important;
+}
+
+header .header-nav .nav-item ul {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  list-style: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  gap: 5px !important;
+  width: 100% !important;
+  text-align: center !important;
+  float: none !important;
+}
+
+header .header-nav .nav-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 70px !important;
+  padding: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Override responsive styles from style.css */
+@media screen and (max-width: 998px) {
+  header .header-nav .nav-item ul li {
+    padding: 0 12px !important;
+    float: none !important;
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .header-nav .nav-item ul li {
+    float: none !important;
+    padding: 0 20px !important;
+    border-top: none !important;
+    width: 100% !important;
+    height: 50px !important;
     justify-content: center !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header-nav .col-lg-3 {
+    min-width: 180px !important;
+    max-width: 220px !important;
+    padding: 0 5px 0 10px !important;
   }
 
   .btn-appointment {
-    padding: 10px 20px !important;
+    padding: 7px 14px !important;
+    font-size: 11px !important;
+    gap: 5px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-nav .container {
+    padding: 0 10px !important;
+  }
+
+  .header-nav .col-lg-3.col-md-3.col-sm-12 {
+    min-width: auto !important;
+    max-width: none !important;
+    padding: 0 10px 0 0 !important;
+  }
+
+  .nav-item {
+    padding: 0 5px !important;
+  }
+
+  .nav-item ul li a {
+    padding: 0 12px !important;
     font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.6px !important;
+  }
+
+  .btn-appointment {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    gap: 4px !important;
+  }
+
+  .logo {
+    font-size: 20px !important;
   }
 }
 
@@ -204,9 +403,11 @@ header {
     min-height: 60px !important;
   }
 
-  .header-nav .col-lg-2.col-md-3.col-sm-12 {
-    font-size: 24px !important;
+  .header-nav .col-lg-3.col-md-3.col-sm-12 {
+    font-size: 20px !important;
     height: 60px !important;
+    min-width: auto !important;
+    padding: 0 5px 0 0 !important;
   }
 
   .small-menu {
@@ -256,17 +457,195 @@ header {
   .mobile-appointment .btn-appointment {
     width: 100% !important;
     justify-content: center !important;
-    padding: 15px 24px !important;
-    font-size: 14px !important;
+    padding: 12px 20px !important;
+    font-size: 13px !important;
+  }
+
+  /* Hide desktop appointment button on mobile */
+  .appoint {
+    display: none !important;
   }
 }
 
 @media (max-width: 480px) {
   .header-nav .container {
-    padding: 0 10px !important;
+    padding: 0 5px !important;
   }
 
-  .header-nav .col-lg-2.col-md-3.col-sm-12 {
-    font-size: 20px !important;
+  .header-nav .col-lg-3.col-md-3.col-sm-12 {
+    font-size: 18px !important;
+    padding: 0 5px 0 0 !important;
   }
+
+  .logo {
+    font-size: 18px !important;
+    margin-right: 10px !important;
+  }
+}
+
+/* Ensure button stays within viewport */
+.header-nav .row {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.header-nav .container {
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Prevent button overflow */
+.header-nav .col-lg-3 {
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+.appoint {
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+/* Additional responsive fixes */
+@media (max-width: 1366px) {
+  .header-nav .col-lg-3 {
+    min-width: 160px !important;
+    max-width: 200px !important;
+  }
+
+  .btn-appointment {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-nav .col-lg-3 {
+    min-width: 160px !important;
+    max-width: 200px !important;
+  }
+
+  .header-nav .col-lg-6.col-md-9 {
+    padding: 0 15px !important;
+  }
+
+  .nav-item ul li a {
+    padding: 0 12px !important;
+    font-size: 13px !important;
+  }
+
+  .btn-appointment {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-nav .col-lg-3 {
+    min-width: 140px !important;
+    max-width: 180px !important;
+    padding: 0 5px 0 5px !important;
+  }
+
+  .appoint {
+    padding: 0 5px 0 0 !important;
+  }
+
+  .btn-appointment {
+    padding: 5px 10px !important;
+    font-size: 10px !important;
+    gap: 3px !important;
+  }
+}
+
+/* --- NAVBAR CENTERING FIX --- */
+.header-nav .row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 70px !important;
+  width: 100% !important;
+}
+
+.header-nav .col-lg-6.col-md-9.nav-item,
+#menu.nav-item {
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  flex: 1 1 0 !important;
+}
+
+.header-nav .nav-item ul {
+  margin: 0 auto !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* --- WHITE SCROLLBAR FOR ALL PAGES --- */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #fff #fff;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* --- FORCE GREEN HOVER & ACTIVE NAV ITEM --- */
+header .header-nav .nav-item ul li a:hover,
+header .header-nav .nav-item ul li a.active,
+.nav-item ul li a:hover,
+.nav-item ul li a.active {
+  color: #28a745 !important;
+  border-bottom: 3px solid #28a745 !important;
+  background: transparent !important;
+}
+
+header .header-nav .nav-item ul li a:hover::after,
+header .header-nav .nav-item ul li a.active::after,
+.nav-item ul li a:hover::after,
+.nav-item ul li a.active::after {
+  width: 80% !important;
+  background: #28a745 !important;
+  display: block !important;
+}
+
+/* If any border-bottom is set elsewhere, remove it for non-active/hover */
+header .header-nav .nav-item ul li a,
+.nav-item ul li a {
+  border-bottom: 3px solid transparent !important;
+}
+
+/* --- FORCE GREEN NAV MENU ITEM HOVER/ACTIVE (HIGHEST SPECIFICITY) --- */
+header .header-nav .nav-item ul li a:hover,
+header .header-nav .nav-item ul li a.active,
+.header-nav .nav-item ul li a:hover,
+.header-nav .nav-item ul li a.active,
+#menu.nav-item ul li a:hover,
+#menu.nav-item ul li a.active {
+  color: #28a745 !important;
+  background: transparent !important;
+  text-decoration: underline !important;
+  border: none !important;
+}
+
+header .header-nav .nav-item ul li a:hover::after,
+header .header-nav .nav-item ul li a.active::after,
+.header-nav .nav-item ul li a:hover::after,
+.header-nav .nav-item ul li a.active::after,
+#menu.nav-item ul li a:hover::after,
+#menu.nav-item ul li a.active::after {
+  width: 80% !important;
+  background: #28a745 !important;
 }
