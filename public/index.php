@@ -23,6 +23,7 @@ echo "<script>window.location.href ='index.php'</script>";
     <link rel="stylesheet" href="assets/css/animate.css">    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nav-center-fix.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/home.css" />    <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/enhanced-sections.css" />    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/slider-fixes.css" />
@@ -53,16 +54,18 @@ echo "<script>window.location.href ='index.php'</script>";
     <body>    <!-- ################# Header Starts Here#######################--->
       <header id="menu-jk">
         <div id="nav-head" class="header-nav">
-            <div class="container">                <div class="row align-items-center">                    <div class="col-lg-2 col-md-3 col-sm-12">
-                        <div class="logo">TVH</div>
+            <div class="container">                <div class="row align-items-center">                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="logo">TVH Healthcare</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
-                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                    <div id="menu" class="col-lg-6 col-md-9 d-none d-md-block nav-item">
                         <ul>
                             <li><a href="index.php" class="active">Home</a></li>
                             <li><a href="services.php">Services</a></li>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="visiting-hours.php">Visiting Hours</a></li>
+                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>  
                         </ul>
@@ -70,7 +73,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
-                    <div class="col-lg-2 d-none d-lg-block appoint">
+                    <div class="col-lg-3 d-none d-lg-block appoint">
                         <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                     </div>
                 </div>
@@ -406,76 +409,83 @@ echo "<script>window.location.href ='index.php'</script>";
         </div>
     </section>
 
-    <!-- ################# News & Updates Section Starts Here #######################-->
-    <section class="news-section py-5 bg-light">
+    <!-- ################# News & Updates Preview Section #######################-->
+    <section class="news-preview py-5">
         <div class="container">
             <div class="inner-title text-center mb-5">
-                <span class="badge badge-success p-2 mb-2">Latest Updates</span>
-                <h2>News & Updates</h2>
-                <p>Stay informed about the latest developments in healthcare and our hospital</p>
+                <span class="badge badge-success p-2 mb-2">Hospital News</span>
+                <h2>Latest News & Updates</h2>
+                <p>Stay informed about hospital developments and healthcare innovations</p>
                 <div class="heading-line bg-success mx-auto"></div>
             </div>
+            
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="news-box bg-white rounded shadow-sm overflow-hidden">
-                        <div class="news-img">
-                            <img src="assets/images/news-1.jpg" alt="News" class="img-fluid">
-                            <div class="news-date">
-                                <span class="day">15</span>
-                                <span class="month">May</span>
-                            </div>
-                        </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="featured-news bg-white rounded shadow-sm overflow-hidden">
+                        <img src="assets/images/news/new-cardiac-wing.jpg" alt="New Cardiac Wing" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
                         <div class="news-content p-4">
-                            <h5><a href="#" class="text-dark">New Cardiac Care Unit Launched</a></h5>
-                            <p class="text-muted small mb-3">We are excited to announce the opening of our state-of-the-art cardiac care unit with advanced monitoring systems...</p>
-                            <div class="news-meta d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user mr-1"></i> Admin</span>
-                                <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+                            <div class="news-meta mb-2">
+                                <span class="badge badge-danger">Breaking News</span>
+                                <small class="text-muted ml-2">July 10, 2025</small>
                             </div>
+                            <h5 class="mb-3">New Cardiac Surgery Wing Opens</h5>
+                            <p class="text-muted mb-3">State-of-the-art cardiac surgery facility now operational with latest technology and equipment...</p>
+                            <a href="news-updates.php" class="btn btn-success">Read Full Story</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="news-box bg-white rounded shadow-sm overflow-hidden">
-                        <div class="news-img">
-                            <img src="assets/images/news-2.jpg" alt="News" class="img-fluid">
-                            <div class="news-date">
-                                <span class="day">12</span>
-                                <span class="month">May</span>
+                
+                <div class="col-lg-6">
+                    <div class="news-list">
+                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-calendar-plus text-success mr-3 mt-1"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">New Online Appointment System</h6>
+                                    <p class="text-muted small mb-1">Book appointments 24/7 through our enhanced online portal</p>
+                                    <small class="text-success">July 8, 2025</small>
+                                </div>
                             </div>
                         </div>
-                        <div class="news-content p-4">
-                            <h5><a href="#" class="text-dark">Health Screening Camp Success</a></h5>
-                            <p class="text-muted small mb-3">Our recent community health screening camp was a great success, serving over 500 community members with free health checkups...</p>
-                            <div class="news-meta d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user mr-1"></i> Dr. Smith</span>
-                                <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+                        
+                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-user-md text-info mr-3 mt-1"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Free Health Screening Camp - July 15th</h6>
+                                    <p class="text-muted small mb-1">Comprehensive health check-ups for community members</p>
+                                    <small class="text-success">July 6, 2025</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-award text-warning mr-3 mt-1"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Hospital Accreditation Renewed</h6>
+                                    <p class="text-muted small mb-1">Successfully renewed Joint Commission accreditation</p>
+                                    <small class="text-success">July 5, 2025</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-mobile-alt text-primary mr-3 mt-1"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Mobile Health App Launch</h6>
+                                    <p class="text-muted small mb-1">New mobile app for patient services now available</p>
+                                    <small class="text-success">June 28, 2025</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="news-box bg-white rounded shadow-sm overflow-hidden">
-                        <div class="news-img">
-                            <img src="assets/images/news-3.jpg" alt="News" class="img-fluid">
-                            <div class="news-date">
-                                <span class="day">08</span>
-                                <span class="month">May</span>
-                            </div>
-                        </div>
-                        <div class="news-content p-4">
-                            <h5><a href="#" class="text-dark">New Technology in Surgery</a></h5>
-                            <p class="text-muted small mb-3">Introducing robotic-assisted surgery capabilities that offer greater precision and faster recovery times for our patients...</p>
-                            <div class="news-meta d-flex justify-content-between align-items-center">
-                                <span class="text-muted small"><i class="fas fa-user mr-1"></i> Dr. Johnson</span>
-                                <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
-                            </div>
-                        </div>
+                    
+                    <div class="text-center mt-3">
+                        <a href="news-updates.php" class="btn btn-outline-success">View All News</a>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn btn-success">View All News</a>
             </div>
         </div>
     </section>
