@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('../src/hms/include/config.php');
-// We don't need to check login for a login portal page
+// We need to check login for a login portal page
 // include_once('../src/hms/include/checklogin.php');
 // check_login();
 ?>
@@ -76,7 +76,7 @@ include_once('../src/hms/include/config.php');
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-3 col-sm-12">
-                        <div class="logo">TVH</div>
+                        <div class="logo">TVH Healthcare</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
@@ -85,13 +85,15 @@ include_once('../src/hms/include/config.php');
                             <li><a href="services.php">Services</a></li>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="visiting-hours.php">Visiting Hours</a></li>
+                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php" class="active">Logins</a></li>  
                         </ul>                        <div class="mobile-appointment d-md-none">
                             <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
-                    <div class="col-lg-2 d-none d-lg-block appoint">
+                    <div class="col-lg-3 d-none d-lg-block appoint">
                         <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                     </div>
                 </div>
