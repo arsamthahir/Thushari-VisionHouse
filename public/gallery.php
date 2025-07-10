@@ -3,78 +3,20 @@ include_once('../src/hms/include/config.php');
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Thushari Vision House - Gallery</title>    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <title>Thushari Vision House - Gallery</title>
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gallery.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Additional Gallery Styles */
-        .gallery-item {
-            margin-bottom: 30px;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .gallery-item img {
-            transition: all 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            padding: 15px;
-            background: white;
-        }
-        
-        .gallery-caption h5 {
-            margin: 0;
-            color: #28a745;
-            font-weight: 600;
-        }
-        
-        .gallery-caption p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .gallery-filter {
-            margin-bottom: 30px;
-        }
-        
-        .filter-button {
-            margin: 0 5px;
-            padding: 8px 20px;
-            border-radius: 30px;
-            background-color: #f8f9fa;
-            color: #333;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        
-        .filter-button:hover, .filter-button.active {
-            background-color: #28a745;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -84,7 +26,7 @@ include_once('../src/hms/include/config.php');
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-3 col-sm-12">
-                        <div class="logo">TVH</div>
+                        <div class="logo">TVH Healthcare</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
@@ -93,13 +35,15 @@ include_once('../src/hms/include/config.php');
                             <li><a href="services.php">Services</a></li>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php" class="active">Gallery</a></li>
+                            <li><a href="visiting-hours.php">Visiting Hours</a></li>
+                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>  
                         </ul>                        <div class="mobile-appointment d-md-none">
                             <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
-                    <div class="col-lg-2 d-none d-lg-block appoint">
+                    <div class="col-lg-3 d-none d-lg-block appoint">
                         <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                     </div>
                 </div>
@@ -128,16 +72,21 @@ include_once('../src/hms/include/config.php');
             </div>
             
             <div class="row">
-                <div class="gallery-filter d-none d-sm-block text-center">
-                    <button class="btn btn-default filter-button active" data-filter="all">All</button>
-                    <button class="btn btn-default filter-button" data-filter="hdpe">Dental</button>
-                    <button class="btn btn-default filter-button" data-filter="sprinkle">Cardiology</button>
-                    <button class="btn btn-default filter-button" data-filter="spray">Neurology</button>
-                    <button class="btn btn-default filter-button" data-filter="irrigation">Laboratory</button>
-                    <button class="btn btn-default filter-button" data-filter="facilities">Facilities</button>
+                <div class="col-12">
+                    <div class="gallery-filter d-none d-sm-block text-center">
+                        <button class="btn filter-button active" data-filter="all"><span>All</span></button>
+                        <button class="btn filter-button" data-filter="hdpe"><span>Dental</span></button>
+                        <button class="btn filter-button" data-filter="sprinkle"><span>Cardiology</span></button>
+                        <button class="btn filter-button" data-filter="spray"><span>Neurology</span></button>
+                        <button class="btn filter-button" data-filter="irrigation"><span>Laboratory</span></button>
+                        <button class="btn filter-button" data-filter="facilities"><span>Facilities</span></button>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="row">
                 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter hdpe">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter hdpe">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_01.jpg" class="img-fluid" alt="Dental Department">
                         <div class="gallery-caption">
@@ -147,7 +96,7 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter sprinkle">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter sprinkle">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_02.jpg" class="img-fluid" alt="Cardiology Department">
                         <div class="gallery-caption">
@@ -157,7 +106,7 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter hdpe">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter hdpe">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_03.jpg" class="img-fluid" alt="Dental Treatment Room">
                         <div class="gallery-caption">
@@ -167,7 +116,7 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter irrigation">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter irrigation">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_04.jpg" class="img-fluid" alt="Laboratory">
                         <div class="gallery-caption">
@@ -177,7 +126,7 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter spray">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter spray">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_05.jpg" class="img-fluid" alt="Neurology Department">
                         <div class="gallery-caption">
@@ -187,7 +136,7 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter spray">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter spray">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_06.jpg" class="img-fluid" alt="Neurology Consultation">
                         <div class="gallery-caption">
@@ -197,32 +146,32 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
                 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter facilities">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter facilities">
                     <div class="gallery-item">
-                        <img src="assets/images/why.jpg" class="img-fluid" alt="Hospital Building">
+                        <img src="assets/images/gallery/gallery_08.jpg" class="img-fluid" alt="Hospital Interior">
                         <div class="gallery-caption">
-                            <h5>Hospital Building</h5>
-                            <p>Modern architectural design for optimal healthcare delivery</p>
+                            <h5>Hospital Interior</h5>
+                            <p>Modern and comfortable interior design for patient well-being</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter facilities">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter facilities">
                     <div class="gallery-item">
-                        <img src="assets/images/slider/slider_2.jpg" class="img-fluid" alt="Reception Area">
+                        <img src="assets/images/gallery/gallery_09.jpg" class="img-fluid" alt="Waiting Area">
                         <div class="gallery-caption">
-                            <h5>Reception Area</h5>
-                            <p>Welcoming environment for patients and visitors</p>
+                            <h5>Waiting Area</h5>
+                            <p>Comfortable seating areas for patients and families</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-12 filter facilities">
+                <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter irrigation">
                     <div class="gallery-item">
-                        <img src="assets/images/slider/slider_3.jpg" class="img-fluid" alt="Patient Care">
+                        <img src="assets/images/gallery/gallery_10.jpg" class="img-fluid" alt="Advanced Laboratory">
                         <div class="gallery-caption">
-                            <h5>Patient Care</h5>
-                            <p>Dedicated healthcare professionals providing quality care</p>
+                            <h5>Advanced Laboratory</h5>
+                            <p>State-of-the-art diagnostic and testing facilities</p>
                         </div>
                     </div>
                 </div>
@@ -302,7 +251,7 @@ include_once('../src/hms/include/config.php');
     
     <script>
         $(document).ready(function(){
-            // Gallery filtering
+            // Gallery filtering with smooth animations
             $(".filter-button").click(function(){
                 var value = $(this).attr('data-filter');
                 
@@ -311,11 +260,20 @@ include_once('../src/hms/include/config.php');
                 $(this).addClass("active");
                 
                 if(value == "all") {
-                    $('.filter').show('1000');
+                    $('.gallery_product').removeClass('hide').addClass('show');
+                    $('.gallery_product').fadeIn(500);
                 } else {
-                    $(".filter").not('.'+value).hide('3000');
-                    $('.filter').filter('.'+value).show('3000');
+                    $(".gallery_product").addClass('hide').removeClass('show');
+                    $(".gallery_product").fadeOut(300, function() {
+                        $('.gallery_product.filter.' + value).removeClass('hide').addClass('show');
+                        $('.gallery_product.filter.' + value).fadeIn(500);
+                    });
                 }
+            });
+            
+            // Add loading animation on page load
+            $('.gallery_product').each(function(index) {
+                $(this).css('animation-delay', (index * 0.1) + 's');
             });
         });
     </script>
