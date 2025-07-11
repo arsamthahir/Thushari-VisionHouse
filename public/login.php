@@ -66,6 +66,188 @@ include_once('../src/hms/include/config.php');
             background-color: #218838;
             transform: scale(1.05);
         }
+
+        /* Page Title Styles */
+        .page-title {
+            background: linear-gradient(90deg, #27ae60 0%, #219150 100%);
+            padding: 60px 0;
+            margin-bottom: 0;
+        }
+
+        .page-title h2 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+        }
+
+        /* Enhanced Login Card Styles */
+        .login-box {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 24px rgba(40,167,69,0.10);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            min-height: 420px;
+            max-width: 370px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .login-box img {
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #27ae60;
+        }
+        .login-info {
+            flex: 1;
+            padding: 24px 18px 18px 18px;
+            background: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .login-info h5 {
+            color: #219150;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        .login-info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 18px;
+        }
+        .login-btn {
+            background-color: #2196f3;
+            color: #fff;
+            border: none;
+            padding: 10px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+            transition: all 0.3s ease;
+        }
+        .login-btn:hover {
+            background-color: #1769aa;
+            color: #fff;
+            transform: scale(1.05);
+        }
+        @media (min-width: 992px) {
+            .login-box {
+                min-height: 420px;
+                max-width: 370px;
+            }
+        }
+        @media (max-width: 991px) {
+            .login-box {
+                min-height: 420px;
+                max-width: 100%;
+            }
+        }
+        .row.login-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+        /* Ensure login cards are always in one line on desktop */
+        @media (min-width: 992px) {
+            .row.login-row {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: stretch;
+                gap: 32px;
+            }
+            .row.login-row > .col-lg-4 {
+                flex: 0 0 32%;
+                max-width: 32%;
+            }
+        }
+        /* Enhanced Patient Registration Card Styles */
+        .patient-register-card {
+            border-radius: 22px !important;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%) !important;
+            box-shadow: 0 8px 32px rgba(40,167,69,0.13) !important;
+            border: none !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .patient-register-card .card-body {
+            padding: 48px 32px !important;
+            position: relative;
+        }
+        .patient-register-card .fa-user-plus {
+            font-size: 2.6rem;
+            color: #27ae60;
+            margin-bottom: 16px;
+            background: rgba(39,174,96,0.08);
+            border-radius: 50%;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(39,174,96,0.08);
+        }
+        .patient-register-card h4 {
+            font-weight: 700;
+            color: #219150;
+            margin-bottom: 14px;
+            font-size: 1.6rem;
+        }
+        .patient-register-card p {
+            font-size: 1.18rem;
+            color: #333;
+            margin-bottom: 28px;
+        }
+        .patient-register-card .btn-success {
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            padding: 14px 44px;
+            box-shadow: 0 2px 12px rgba(40,167,69,0.13);
+            background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+            border: none;
+            position: relative;
+            transition: all 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .patient-register-card .btn-success:hover {
+            background: linear-gradient(90deg, #2ecc71 0%, #27ae60 100%);
+            box-shadow: 0 8px 24px rgba(40,167,69,0.18);
+            transform: scale(1.07) translateY(-2px);
+            color: #fff;
+        }
+        .patient-register-card .btn-success:active {
+            transform: scale(0.98);
+        }
+        .patient-register-card .btn-success:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.18);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s cubic-bezier(.68,-0.55,.27,1.55), height 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+            z-index: 0;
+        }
+        .patient-register-card .btn-success:hover:after {
+            width: 180%;
+            height: 180%;
+        }
     </style>
 </head>
 
@@ -101,12 +283,12 @@ include_once('../src/hms/include/config.php');
     </header>
 
     <!-- ################# Page Title #######################-->
-    <div class="page-title">
+    <div class="page-title" style="background: linear-gradient(90deg, #27ae60 0%, #219150 100%); padding: 60px 0; margin-bottom: 0;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Login Portal</h2>
-                    <p>Access your account based on your role</p>
+                    <h2 style="color: #fff; font-size: 3rem; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.10); margin-bottom: 10px;">Login Portal</h2>
+                    <p style="color: #fff; font-size: 1.25rem; font-weight: 400; text-shadow: 0 1px 4px rgba(0,0,0,0.10);">Access your account based on your role</p>
                 </div>
             </div>
         </div>
@@ -115,18 +297,15 @@ include_once('../src/hms/include/config.php');
     <!-- ################# Login Section Starts Here #######################-->
     <section class="our-blog container-fluid">
         <div class="container">
-            <div class="inner-title">
-                <h2>Logins</h2>
-                <p>Select the appropriate portal based on your role</p>
-            </div>
             
-            <div class="row">
+            <div class="row login-row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="login-box">
                         <img src="assets/images/patient.jpg" alt="Patient Portal" class="img-fluid w-100">
                         <div class="login-info">
                             <h5>Patient Login</h5>
-                            <p>Access your medical records, appointments, and communicate with your healthcare providers.</p>                            <a href="../src/hms/user-login.php" target="_blank">
+                            <p>Access your medical records, appointments, and communicate with your healthcare providers.</p>
+                            <a href="../src/hms/user-login.php" target="_blank">
                                 <button class="btn login-btn">Login Now</button>
                             </a>
                         </div>
@@ -138,7 +317,8 @@ include_once('../src/hms/include/config.php');
                         <img src="assets/images/doctor.jpg" alt="Doctor Portal" class="img-fluid w-100">
                         <div class="login-info">
                             <h5>Doctor Login</h5>
-                            <p>Access patient information, manage appointments, and update treatment plans.</p>                            <a href="../src/hms/doctor/index.php" target="_blank">
+                            <p>Access patient information, manage appointments, and update treatment plans.</p>
+                            <a href="../src/hms/doctor/index.php" target="_blank">
                                 <button class="btn login-btn">Login Now</button>
                             </a>
                         </div>
@@ -150,7 +330,8 @@ include_once('../src/hms/include/config.php');
                         <img src="assets/images/admin.jpg" alt="Admin Portal" class="img-fluid w-100">
                         <div class="login-info">
                             <h5>Admin Login</h5>
-                            <p>Manage hospital operations, staff, and system configurations.</p>                            <a href="../src/hms/admin/index.php" target="_blank">
+                            <p>Manage hospital operations, staff, and system configurations.</p>
+                            <a href="../src/hms/admin/index.php" target="_blank">
                                 <button class="btn login-btn">Login Now</button>
                             </a>
                         </div>
@@ -160,12 +341,12 @@ include_once('../src/hms/include/config.php');
             
             <div class="row mt-5">
                 <div class="col-md-6 offset-md-3">
-                    <div class="card shadow">
-                        <div class="card-body">                            <h4 class="text-center mb-4">Don't have an account?</h4>
-                            <p class="text-center">If you're a new patient, you can register for an account to access our online services.</p>
-                            <div class="text-center mt-4">
-                                <a href="../src/hms/registration.php" class="btn btn-primary">Register Now</a>
-                            </div>
+                    <div class="card shadow patient-register-card" style="border-radius: 18px; background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); box-shadow: 0 6px 24px rgba(40,167,69,0.10);">
+                        <div class="card-body text-center" style="padding: 38px 28px;">
+                            <div style="font-size: 2.2rem; color: #27ae60; margin-bottom: 12px;"><i class="fas fa-user-plus"></i></div>
+                            <h4 class="mb-3" style="font-weight: 700; color: #219150;">Don't have an account?</h4>
+                            <p style="font-size: 1.15rem; color: #333; margin-bottom: 24px;">If you're a new patient, you can register for an account to access our online services.</p>
+                            <a href="../src/hms/registration.php" class="btn btn-success btn-lg" style="border-radius: 30px; font-weight: 600; font-size: 1.1rem; padding: 12px 38px; box-shadow: 0 2px 8px rgba(40,167,69,0.10);"><i class="fas fa-user-edit mr-2"></i> Register Now</a>
                         </div>
                     </div>
                 </div>
