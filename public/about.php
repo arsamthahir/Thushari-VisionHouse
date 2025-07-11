@@ -92,23 +92,52 @@ include_once('../src/hms/include/config.php');
     <!-- Our Mission and Vision -->
     <section class="our-mission">
         <div class="container">
-            <div class="inner-title">
+            <div class="inner-title text-center mb-5">
                 <span class="badge badge-success p-2 mb-2">Our Purpose</span>
                 <h2>Our Mission & Vision</h2>
-                <div class="heading-line bg-success mx-auto"></div>
-                <p class="section-subtitle">Committed to excellence in healthcare</p>
+                <p class="section-subtitle">Committed to excellence in healthcare delivery</p>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="mission-box">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="mission-box wow fadeInLeft" data-wow-delay="0.1s">
                         <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
-                        <p>At Thushari Vision House, our mission is to provide exceptional healthcare services that improve the health and wellbeing of the individuals and communities we serve. We are committed to delivering compassionate, high-quality care that is accessible to all.</p>
+                        <p>At Thushari Vision House, our mission is to provide <span class="mission-highlight">exceptional healthcare services</span> that improve the health and wellbeing of the individuals and communities we serve.</p>
+                        <div class="mission-values">
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Delivering compassionate, high-quality care</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Ensuring healthcare is accessible to all</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Upholding the highest medical standards</span>
+                            </div>
+                        </div>
+                        <img src="assets/images/heartbeat.png" class="mission-image" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="mission-box">
+                    <div class="mission-box wow fadeInRight" data-wow-delay="0.2s">
                         <h4><i class="fas fa-eye"></i> Our Vision</h4>
-                        <p>Our vision is to be the preferred healthcare provider known for excellence in patient care, innovative treatments, and a healing environment. We strive to be leaders in healthcare innovation while maintaining our commitment to the communities we serve.</p>
+                        <p>Our vision is to be the <span class="mission-highlight">preferred healthcare provider</span> known for excellence in patient care, innovative treatments, and a healing environment.</p>
+                        <div class="mission-values">
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Leading healthcare innovation and technology</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Creating a comfortable healing environment</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Building lasting community relationships</span>
+                            </div>
+                        </div>
+                        <img src="assets/images/stethoscope.png" class="mission-image" alt="">
                     </div>
                 </div>
             </div>
@@ -122,7 +151,7 @@ include_once('../src/hms/include/config.php');
                 <span class="badge badge-success p-2 mb-2">Expert Professionals</span>
                 <h2>Our Medical Team</h2>
                 <p class="section-subtitle">Meet our experienced healthcare professionals</p>
-                <div class="heading-line bg-success mx-auto"></div>
+                 
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -206,8 +235,7 @@ include_once('../src/hms/include/config.php');
         <div class="container">
             <div class="inner-title text-center mb-5">
                 <span class="badge badge-success p-2 mb-2">Our Legacy</span>
-                <h2>Our Evolution Through the Years</h2>
-                <div class="heading-line bg-success mx-auto"></div>
+                <h2>Our Evolution Through the Years</h2>              
                 <p class="section-subtitle">Tracing the remarkable journey of Thushari Vision House from inception to excellence</p>
                 <!-- Added scroll prompt for better UX -->
                 <div class="scroll-prompt text-center mt-4">

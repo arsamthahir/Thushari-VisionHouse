@@ -410,3 +410,137 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 142, 76, 0.3);
 }
+
+/* Mission and Vision Styles */
+.our-mission {
+    padding: 70px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/pattern-bg.png');
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-mission .inner-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mission-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid transparent;
+    z-index: 1;
+}
+
+.mission-box::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(0, 142, 76, 0.08), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.mission-box:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid #008e4c;
+}
+
+.mission-box:hover::before {
+    height: 100%;
+}
+
+.mission-box h4 {
+    color: #008e4c;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mission-box h4::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #008e4c;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover h4::after {
+    width: 80px;
+}
+
+.mission-box h4 i {
+    font-size: 24px;
+    margin-right: 15px;
+    background: rgba(0, 142, 76, 0.1);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover h4 i {
+    background: #008e4c;
+    color: white;
+    transform: rotateY(360deg);
+}
+
+.mission-box p {
+    color: #666;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.mission-values {
+    margin-top: 20px;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.value-item i {
+    color: #008e4c;
+    margin-right: 10px;
+}
+
+.mission-highlight {
+    font-weight: 600;
+    color: #008e4c;
+}
+
+.mission-image {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 130px;
+    height: 130px;
+    opacity: 0.07;
+    transform: rotate(15deg);
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    .mission-box {
+        margin-bottom: 30px;
+    }
+}
