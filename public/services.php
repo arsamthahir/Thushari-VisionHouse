@@ -62,6 +62,11 @@ include_once('../src/hms/include/config.php');
             </div>
         </div>
     </div>
+    
+    <!-- Services Banner Image -->
+    <div class="services-banner">
+        <img src="assets/images/services/bg.jpg" alt="Healthcare Services" class="img-fluid">
+    </div>
 
     <!-- ################# Services Starts Here #######################-->
     <section class="key-features department">
@@ -245,6 +250,24 @@ include_once('../src/hms/include/config.php');
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Add a slight parallax effect to the banner image on scroll
+            $(window).scroll(function() {
+                var scrollPos = $(this).scrollTop();
+                $('.services-banner img').css({
+                    'transform': 'translateY(' + scrollPos/10 + 'px)'
+                });
+            });
+            
+            // Enhance services boxes with animation
+            $('.single-key, .service-box').each(function(index) {
+                $(this).css('animation-delay', (index * 0.1) + 's');
+                $(this).addClass('animated-service');
+            });
+        });
+    </script>
 </body>
 
 </html>
