@@ -3,6 +3,7 @@ include_once('../src/hms/include/config.php');
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +28,7 @@ include_once('../src/hms/include/config.php');
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-md-3 col-sm-12">
                         <div class="logo">TVH Healthcare</div>
-                       <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
+                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
                         <ul>
@@ -37,8 +38,9 @@ include_once('../src/hms/include/config.php');
                             <li><a href="gallery.php" class="active">Gallery</a></li>
                             <li><a href="visiting-hours.php">Visiting Hours</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="login.php">Logins</a></li>  
-                        </ul>                        <div class="mobile-appointment d-md-none">
+                            <li><a href="login.php">Logins</a></li>
+                        </ul>
+                        <div class="mobile-appointment d-md-none">
                             <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
@@ -63,13 +65,8 @@ include_once('../src/hms/include/config.php');
     </div>
 
     <!-- ################# Gallery Starts Here #######################-->
-    <div class="gallery">    
+    <div class="gallery">
         <div class="container">
-            <div class="inner-title">
-                <h2>Our Gallery</h2>
-                <p>Take a visual tour of our facilities and services</p>
-            </div>
-            
             <div class="row">
                 <div class="col-12">
                     <div class="gallery-filter d-none d-sm-block text-center">
@@ -82,9 +79,9 @@ include_once('../src/hms/include/config.php');
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
-                
+
                 <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter hdpe">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_01.jpg" class="img-fluid" alt="Dental Department">
@@ -144,7 +141,7 @@ include_once('../src/hms/include/config.php');
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter facilities">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_08.jpg" class="img-fluid" alt="Hospital Interior">
@@ -154,7 +151,7 @@ include_once('../src/hms/include/config.php');
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter facilities">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_09.jpg" class="img-fluid" alt="Waiting Area">
@@ -164,7 +161,7 @@ include_once('../src/hms/include/config.php');
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-12 filter irrigation">
                     <div class="gallery-item">
                         <img src="assets/images/gallery/gallery_10.jpg" class="img-fluid" alt="Advanced Laboratory">
@@ -209,9 +206,10 @@ include_once('../src/hms/include/config.php');
                     <h4>Contact Us</h4>
                     <ul class="footer-links footer-contact">
                         <?php
-                        $ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
-                        while ($row=mysqli_fetch_array($ret)) {
+                        $ret = mysqli_query($con, "select * from tblpage where PageType='contactus' ");
+                        while ($row = mysqli_fetch_array($ret)) {
                         ?>
+
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div><?php echo $row['PageDescription']; ?></div>
@@ -228,37 +226,38 @@ include_once('../src/hms/include/config.php');
                             <i class="fas fa-clock"></i>
                             <div><?php echo $row['OpenningTime']; ?></div>
                         </li>
+
                         <?php } ?>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <div class="copy">
         <div class="container">
             &copy; <?php echo date('Y'); ?> Thushari Vision House - All Rights Reserved
         </div>
     </div>
-    
+
     <!-- Javascripts -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             // Gallery filtering with smooth animations
-            $(".filter-button").click(function(){
+            $(".filter-button").click(function() {
                 var value = $(this).attr('data-filter');
-                
+
                 // Toggle active class
                 $(".filter-button").removeClass("active");
                 $(this).addClass("active");
-                
-                if(value == "all") {
+
+                if (value == "all") {
                     $('.gallery_product').removeClass('hide').addClass('show');
                     $('.gallery_product').fadeIn(500);
                 } else {
@@ -269,7 +268,7 @@ include_once('../src/hms/include/config.php');
                     });
                 }
             });
-            
+
             // Add loading animation on page load
             $('.gallery_product').each(function(index) {
                 $(this).css('animation-delay', (index * 0.1) + 's');

@@ -1,0 +1,546 @@
+/* About Page Specific Styles */
+
+.about-us {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-image {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-content {
+    padding: 30px;
+}
+
+/* Doctor Section Styles */
+.our-doctors {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.doctor-box {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.doctor-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.doctor-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.doctor-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.doctor-box:hover .doctor-img img {
+    transform: scale(1.05);
+}
+
+.doctor-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 142, 76, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.doctor-box:hover .doctor-social {
+    bottom: 0;
+    opacity: 1;
+}
+
+.doctor-social a {
+    color: white;
+    margin: 0 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.doctor-social a:hover {
+    transform: scale(1.2);
+}
+
+.doctor-info {
+    background: #fff;
+}
+
+.doctor-info h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 600;
+}
+
+.doctor-speciality {
+    color: #008e4c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Enhanced History Timeline Styles */
+.our-history {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-history::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/pattern-bg.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.our-history .inner-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.history-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #008e4c;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px rgba(0, 142, 76, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 50px;
+    padding-right: 40px;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.timeline-item.show-timeline {
+    opacity: 1;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #008e4c;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(0, 142, 76, 0.5);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::after {
+    background-color: #008e4c;
+    transform: scale(1.2);
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -12px;
+}
+
+.year {
+    position: absolute;
+    top: 0;
+    right: -120px;
+    background-color: #008e4c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 142, 76, 0.3);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .year {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 142, 76, 0.4);
+}
+
+.timeline-item:nth-child(even) .year {
+    left: -120px;
+    right: auto;
+}
+
+.content {
+    padding: 25px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
+
+.timeline-item.show-timeline .content {
+    transform: translateY(0);
+}
+
+.timeline-item:hover .content {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+    top: 15px;
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .content::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.content h4 {
+    color: #008e4c;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content p {
+    margin-bottom: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Scroll Prompt Animation */
+.scroll-prompt {
+    margin-bottom: 30px;
+}
+
+.scroll-arrow {
+    margin-top: 10px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow i {
+    font-size: 24px;
+    color: #008e4c;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+/* Add a special effect for the last timeline item */
+.timeline-item:last-child .year {
+    background: linear-gradient(135deg, #008e4c 0%, #00b35c 100%);
+    box-shadow: 0 5px 20px rgba(0, 142, 76, 0.4);
+}
+
+.timeline-item:last-child::after {
+    border-color: #00b35c;
+    background-color: #fff;
+}
+
+/* Add animation for timeline dots */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 142, 76, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 142, 76, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 142, 76, 0);
+    }
+}
+
+.timeline-item::after {
+    animation: pulse 2s infinite;
+}
+
+/* Media Queries for Responsive Timeline */
+@media screen and (max-width: 768px) {
+    .history-timeline::before {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+        padding-left: 70px;
+    }
+    
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 18px;
+    }
+    
+    .year,
+    .timeline-item:nth-child(even) .year {
+        right: auto;
+        left: 0;
+        margin-left: -20px;
+        top: 0;
+        font-size: 16px;
+        padding: 5px 12px;
+    }
+    
+    .content::before,
+    .timeline-item:nth-child(even) .content::before {
+        display: none;
+    }
+}
+
+/* Future Vision Card */
+.future-vision {
+    position: relative;
+}
+
+.vision-card {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-top: 4px solid #008e4c;
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.vision-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern-bg.png');
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.vision-card h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.vision-card .btn {
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.vision-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 142, 76, 0.3);
+}
+
+/* Mission and Vision Styles */
+.our-mission {
+    padding: 70px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/pattern-bg.png');
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-mission .inner-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mission-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid transparent;
+    z-index: 1;
+}
+
+.mission-box::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(0, 142, 76, 0.08), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.mission-box:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid #008e4c;
+}
+
+.mission-box:hover::before {
+    height: 100%;
+}
+
+.mission-box h4 {
+    color: #008e4c;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mission-box h4::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #008e4c;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover h4::after {
+    width: 80px;
+}
+
+.mission-box h4 i {
+    font-size: 24px;
+    margin-right: 15px;
+    background: rgba(0, 142, 76, 0.1);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover h4 i {
+    background: #008e4c;
+    color: white;
+    transform: rotateY(360deg);
+}
+
+.mission-box p {
+    color: #666;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.mission-values {
+    margin-top: 20px;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.value-item i {
+    color: #008e4c;
+    margin-right: 10px;
+}
+
+.mission-highlight {
+    font-weight: 600;
+    color: #008e4c;
+}
+
+.mission-image {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 130px;
+    height: 130px;
+    opacity: 0.07;
+    transform: rotate(15deg);
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    .mission-box {
+        margin-bottom: 30px;
+    }
+}

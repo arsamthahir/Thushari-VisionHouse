@@ -7,13 +7,16 @@ include_once('../src/hms/include/config.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Thushari Vision House - Services</title>    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <title>Thushari Vision House - Services</title>
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gallery.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/enhanced-sections.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -26,7 +29,7 @@ include_once('../src/hms/include/config.php');
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3 col-sm-12">
                         <div class="logo">TVH Healthcare</div>
-                       <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
+                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
                     <div id="menu" class="col-lg-6 col-md-9 d-none d-md-block nav-item">
                         <ul>
@@ -36,8 +39,9 @@ include_once('../src/hms/include/config.php');
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="visiting-hours.php">Visiting Hours</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="login.php">Logins</a></li>  
-                        </ul>                        <div class="mobile-appointment d-md-none">
+                            <li><a href="login.php">Logins</a></li>
+                        </ul>
+                        <div class="mobile-appointment d-md-none">
                             <a class="btn btn-appointment" href="../src/hms/user-login.php"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                         </div>
                     </div>
@@ -61,12 +65,18 @@ include_once('../src/hms/include/config.php');
         </div>
     </div>
 
+    <!-- Services Banner Image -->
+    <div class="services-banner">
+        <img src="assets/images/services/bg.jpg" alt="Healthcare Services" class="img-fluid">
+    </div>
+
     <!-- ################# Services Starts Here #######################-->
     <section class="key-features department">
         <div class="container">
             <div class="inner-title">
-                <h2>Our Key Features</h2>
-                <p>Take a look at some of our key features</p>
+                <span class="badge badge-success p-2 mb-2">Healthcare Excellence</span>
+                <h2 >Our Key Features</h2>
+                <p class="section-subtitle">Take a look at some of our key features</p>
             </div>
 
             <div class="row">
@@ -88,7 +98,7 @@ include_once('../src/hms/include/config.php');
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-key">
-                       <i class="fab fa-monero"></i>
+                        <i class="fab fa-monero"></i>
                         <h5>Neurologist</h5>
                         <p>Our neurology department offers specialized care for conditions affecting the brain, spine, and nervous system with advanced diagnostic capabilities.</p>
                     </div>
@@ -121,12 +131,16 @@ include_once('../src/hms/include/config.php');
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <!-- <div class="section-divider"></div> -->
+
     <!-- Additional Services Section -->
-    <section class="our-services container-fluid">
+    <section class="our-services">
         <div class="container">
             <div class="inner-title">
+                <span class="badge badge-success p-2 mb-2">Full-Service Healthcare</span>
                 <h2>Additional Services</h2>
-                <p>Comprehensive healthcare for all your needs</p>
+                <p class="section-subtitle ">Comprehensive healthcare for all your needs</p>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6">
@@ -175,7 +189,10 @@ include_once('../src/hms/include/config.php');
         </div>
     </section>
 
-    <!-- ################# Footer Starts Here #######################-->    <!-- Footer -->
+    <!-- Add some space before the footer -->
+    <div style="margin-bottom: 60px;"></div>
+
+    <!-- ################# Footer Starts Here #######################--> <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -206,9 +223,10 @@ include_once('../src/hms/include/config.php');
                     <h4>Contact Us</h4>
                     <ul class="footer-links footer-contact">
                         <?php
-                        $ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
-                        while ($row=mysqli_fetch_array($ret)) {
+                        $ret = mysqli_query($con, "select * from tblpage where PageType='contactus' ");
+                        while ($row = mysqli_fetch_array($ret)) {
                         ?>
+
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div><?php echo $row['PageDescription']; ?></div>
@@ -225,6 +243,7 @@ include_once('../src/hms/include/config.php');
                             <i class="fas fa-clock"></i>
                             <div><?php echo $row['OpenningTime']; ?></div>
                         </li>
+                      
                         <?php } ?>
                     </ul>
                 </div>
@@ -236,13 +255,58 @@ include_once('../src/hms/include/config.php');
             &copy; <?php echo date('Y'); ?> Thushari Vision House - All Rights Reserved
         </div>
     </div>
-    
+
     <!-- Javascripts -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Add a slight parallax effect to the banner image on scroll
+            $(window).scroll(function() {
+                var scrollPos = $(this).scrollTop();
+                $('.services-banner img').css({
+                    'transform': 'translateY(' + scrollPos / 10 + 'px)'
+                });
+            });
+
+            // Enhanced animations for service sections
+            function animateOnScroll() {
+                $('.single-key, .service-box').each(function() {
+                    var position = $(this).offset().top;
+                    var scrollPosition = $(window).scrollTop() + $(window).height() - 100;
+
+                    if (position < scrollPosition) {
+                        $(this).addClass('animated-service');
+                    }
+                });
+            }
+
+            // Initialize animations
+            $('.single-key, .service-box').each(function(index) {
+                $(this).css('animation-delay', (index * 0.1) + 's');
+            });
+
+            // Run animation check on scroll
+            $(window).on('scroll', animateOnScroll);
+
+            // Run once on page load
+            animateOnScroll();
+
+            // Add hover effect for icons
+            $('.single-key, .service-box').hover(
+                function() {
+                    $(this).find('i').addClass('animated pulse');
+                },
+                function() {
+                    $(this).find('i').removeClass('animated pulse');
+                }
+            );
+        });
+    </script>
 </body>
 
 </html>
