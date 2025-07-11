@@ -38,7 +38,6 @@ include_once('../src/hms/include/config.php');
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="visiting-hours.php">Visiting Hours</a></li>
-                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>
                         </ul>
@@ -227,22 +226,24 @@ include_once('../src/hms/include/config.php');
                         $ret = mysqli_query($con, "select * from tblpage where PageType='contactus' ");
                         while ($row = mysqli_fetch_array($ret)) {
                         ?>
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div><?php echo $row['PageDescription']; ?></div>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <div><?php echo $row['MobileNumber']; ?></div>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <div><a href="mailto:<?php echo $row['Email']; ?>"><?php echo $row['Email']; ?></a></div>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock"></i>
-                                <div><?php echo $row['OpenningTime']; ?></div>
-                            </li>
+
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><?php echo $row['PageDescription']; ?></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div><?php echo $row['MobileNumber']; ?></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div><a href="mailto:<?php echo $row['Email']; ?>"><?php echo $row['Email']; ?></a></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div><?php echo $row['OpenningTime']; ?></div>
+                        </li>
+                      
                         <?php } ?>
                     </ul>
                 </div>

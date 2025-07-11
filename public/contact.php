@@ -113,7 +113,6 @@ echo "<script>window.location.href ='contact.php'</script>";
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="visiting-hours.php">Visiting Hours</a></li>
-                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php" class="active">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>  
                         </ul>                        <div class="mobile-appointment d-md-none">
@@ -280,7 +279,7 @@ echo "<script>window.location.href ='contact.php'</script>";
                             <div><?php echo $row['PageDescription']; ?></div>
                         </li>
                         <li>
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-phone"></i>
                             <div><?php echo $row['MobileNumber']; ?></div>
                         </li>
                         <li>

@@ -38,7 +38,6 @@ include_once('../src/hms/include/config.php');
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="visiting-hours.php" class="active">Visiting Hours</a></li>
-                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>  
                         </ul>
@@ -294,7 +293,6 @@ include_once('../src/hms/include/config.php');
                         <li><a href="about.php"><i class="fas fa-angle-right"></i> About Us</a></li>
                         <li><a href="gallery.php"><i class="fas fa-angle-right"></i> Gallery</a></li>
                         <li><a href="visiting-hours.php"><i class="fas fa-angle-right"></i> Visiting Hours</a></li>
-                        <li><a href="news-updates.php"><i class="fas fa-angle-right"></i> News & Updates</a></li>
                         <li><a href="contact.php"><i class="fas fa-angle-right"></i> Contact Us</a></li>
                         <li><a href="login.php"><i class="fas fa-angle-right"></i> Login Portals</a></li>
                     </ul>
@@ -311,7 +309,7 @@ include_once('../src/hms/include/config.php');
                             <div><?php echo $row['PageDescription']; ?></div>
                         </li>
                         <li>
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-phone"></i>
                             <div><?php echo $row['MobileNumber']; ?></div>
                         </li>
                         <li>
