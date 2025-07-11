@@ -24,8 +24,15 @@ echo "<script>window.location.href ='contact.php'</script>";
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nav-center-fix.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Critical inline style to fix gap */
+        header { margin: 0 !important; padding: 0 !important; font-size: 0 !important; }
+        body { overflow-x: hidden; }
+    </style>
     <style>
         /* Additional Contact Page Styles */
         .contact-info-box {
@@ -309,6 +316,27 @@ echo "<script>window.location.href ='contact.php'</script>";
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Header active link management
+            function setActiveContactLink() {
+                var currentPage = window.location.pathname.split("/").pop();
+                // Check if it's contact.php or with a hash
+                if (currentPage === 'contact.php' || currentPage.startsWith('contact.php#')) {
+                    $('#menu ul li a').removeClass('active');
+                    $('#menu ul li a[href="contact.php"]').addClass('active');
+                }
+            }
+            // Set active link on page load
+            setActiveContactLink();
+
+            // Enforce active link on scroll
+            $(window).on('scroll', function() {
+                setActiveContactLink();
+            });
+        });
+    </script>
 </body>
 
 </html>

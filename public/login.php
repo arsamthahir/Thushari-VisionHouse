@@ -18,9 +18,15 @@ include_once('../src/hms/include/config.php');
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nav-center-fix.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Critical inline style to fix gap */
+        header { margin: 0 !important; padding: 0 !important; font-size: 0 !important; }
+        body { overflow-x: hidden; }
+        
         /* Additional Login Page Styles */
         .login-box {
             border-radius: 10px;
@@ -257,11 +263,11 @@ include_once('../src/hms/include/config.php');
         <div id="nav-head" class="header-nav">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-3 col-sm-12">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
                         <div class="logo">TVH Healthcare</div>
                        <a data-toggle="collapse" data-target="#menu" href="#menu" class="d-block d-md-none"><i class="fas small-menu fa-bars"></i></a>
                     </div>
-                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                    <div id="menu" class="col-lg-6 col-md-9 d-none d-md-block nav-item">
                         <ul>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="services.php">Services</a></li>
@@ -423,6 +429,27 @@ include_once('../src/hms/include/config.php');
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Header active link management
+            function setActiveLoginLink() {
+                var currentPage = window.location.pathname.split("/").pop();
+                // Check if it's login.php or with a hash
+                if (currentPage === 'login.php' || currentPage.startsWith('login.php#')) {
+                    $('#menu ul li a').removeClass('active');
+                    $('#menu ul li a[href="login.php"]').addClass('active');
+                }
+            }
+            // Set active link on page load
+            setActiveLoginLink();
+
+            // Enforce active link on scroll
+            $(window).on('scroll', function() {
+                setActiveLoginLink();
+            });
+        });
+    </script>
 </body>
 
 </html>

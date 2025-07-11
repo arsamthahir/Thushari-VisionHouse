@@ -15,10 +15,17 @@ include_once('../src/hms/include/config.php');
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nav-center-fix.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/gallery.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/enhanced-sections.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Critical inline style to fix gap */
+        header { margin: 0 !important; padding: 0 !important; font-size: 0 !important; }
+        body { overflow-x: hidden; }
+    </style>
 </head>
 
 <body>
@@ -265,6 +272,23 @@ include_once('../src/hms/include/config.php');
 
     <script>
         $(document).ready(function() {
+            // Header active link management
+            function setActiveServicesLink() {
+                var currentPage = window.location.pathname.split("/").pop();
+                // Check if it's services.php or with a hash
+                if (currentPage === 'services.php' || currentPage.startsWith('services.php#')) {
+                    $('#menu ul li a').removeClass('active');
+                    $('#menu ul li a[href="services.php"]').addClass('active');
+                }
+            }
+            // Set active link on page load
+            setActiveServicesLink();
+
+            // Enforce active link on scroll
+            $(window).on('scroll', function() {
+                setActiveServicesLink();
+            });
+            
             // Add a slight parallax effect to the banner image on scroll
             $(window).scroll(function() {
                 var scrollPos = $(this).scrollTop();
