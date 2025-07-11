@@ -65,7 +65,6 @@ echo "<script>window.location.href ='index.php'</script>";
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="visiting-hours.php">Visiting Hours</a></li>
-                            <li><a href="news-updates.php">News & Updates</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="login.php">Logins</a></li>  
                         </ul>
@@ -221,7 +220,7 @@ echo "<script>window.location.href ='index.php'</script>";
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc1.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -229,7 +228,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. David Kanuel</h5>
+                            <h5>Dr. Anula Wijesundare</h5>
                             <span class="doctor-speciality">Chief Medical Officer</span>
                             <p class="text-muted small mt-2">Over 15 years of experience in general medicine and healthcare management</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -239,7 +238,7 @@ echo "<script>window.location.href ='index.php'</script>";
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc2.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -247,7 +246,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Sanitha Mathews</h5>
+                            <h5>Dr. Sharmila</h5>
                             <span class="doctor-speciality">Cardiologist</span>
                             <p class="text-muted small mt-2">Specializes in advanced cardiac care and interventional procedures</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -257,7 +256,7 @@ echo "<script>window.location.href ='index.php'</script>";
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc3.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -265,7 +264,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Meena Rajput</h5>
+                            <h5>Dr. Arun Kulatunga</h5>
                             <span class="doctor-speciality">Neurologist</span>
                             <p class="text-muted small mt-2">Expert in treating complex neurological conditions with precision</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -275,7 +274,7 @@ echo "<script>window.location.href ='index.php'</script>";
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc4.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -283,7 +282,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Samuel Kumar</h5>
+                            <h5>Dr. Fathima</h5>
                             <span class="doctor-speciality">Orthopedic Surgeon</span>
                             <p class="text-muted small mt-2">Skilled surgeon specializing in joint replacements and sports injuries</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -368,127 +367,360 @@ echo "<script>window.location.href ='index.php'</script>";
         </div>
     </section>
       <!-- ################# Statistics Counter Section Starts Here #######################-->
-    <section class="stats-counter py-5" style="background-image: url('assets/images/counter-bg.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
-        <div class="container">
-            <div class="inner-title text-center mb-5">
-                <span class="badge badge-light p-2 mb-2">Our Achievements</span>
-                <h2 class="text-white font-weight-bold">Hospital Statistics</h2>
-                <p class="text-white-50">A Glimpse into Our Impact and Growth</p>
-                <div class="heading-line bg-white mx-auto"></div>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-box bg-white p-4 rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-                        <i class="fas fa-procedures fa-3x text-success mb-3"></i>
-                        <h3 class="counter font-weight-bold" data-count="5500">0</h3>
-                        <p class="text-muted font-weight-medium">Successful Surgeries</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-box bg-white p-4 rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-                        <i class="fas fa-user-md fa-3x text-success mb-3"></i>
-                        <h3 class="counter font-weight-bold" data-count="120">0</h3>
-                        <p class="text-muted font-weight-medium">Qualified Doctors</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-box bg-white p-4 rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-                        <i class="fas fa-hospital-user fa-3x text-success mb-3"></i>
-                        <h3 class="counter font-weight-bold" data-count="25000">0</h3>
-                        <p class="text-muted font-weight-medium">Happy Patients</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-box bg-white p-4 rounded shadow-sm h-100 d-flex flex-column justify-content-center">
-                        <i class="fas fa-award fa-3x text-success mb-3"></i>
-                        <h3 class="counter font-weight-bold" data-count="50">0</h3>
-                        <p class="text-muted font-weight-medium">Years of Service</p>
-                    </div>
-                </div>
-            </div>
+    <style>
+/* Enhanced Hospital Statistics Section - Advanced Hover & Icon Animation */
+.stats-counter {
+  position: relative;
+  background: linear-gradient(135deg, #28a745 0%, #218838 100%) !important;
+  background-image: url('assets/images/counter-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 70px 0 60px 0;
+}
+.stats-counter .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(40,167,69,0.7);
+  z-index: 1;
+}
+.stats-counter .container { position: relative; z-index: 2; }
+.stats-counter .inner-title {
+  margin-bottom: 40px;
+}
+.stats-counter .inner-title h2 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.stats-counter .inner-title p {
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+.stats-counter .heading-line {
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  margin: 0 auto 0 auto;
+  border-radius: 2px;
+}
+.stats-counter .badge {
+  background: #fff;
+  color: #28a745;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(40,167,69,0.12);
+}
+.stats-counter .row {
+  margin-top: 30px;
+}
+.stats-counter .stat-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(40,167,69,0.10);
+  padding: 38px 18px 28px 18px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.stats-counter .stat-box:hover {
+  box-shadow: 0 16px 40px rgba(40,167,69,0.22);
+  transform: translateY(-8px) scale(1.06);
+}
+.stats-counter .stat-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  margin-bottom: 18px;
+  color: #28a745;
+  background: #fff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(40,167,69,0.10);
+  transition: color 0.3s, filter 0.3s;
+}
+.stats-counter .stat-box:hover i {
+  animation: statIconBounce 0.7s;
+  color: #218838;
+  filter: drop-shadow(0 0 8px #28a745);
+}
+@keyframes statIconBounce {
+  0%   { transform: scale(1) rotate(0deg); }
+  30%  { transform: scale(1.2) rotate(-10deg); }
+  50%  { transform: scale(1.1) rotate(10deg); }
+  70%  { transform: scale(1.2) rotate(-10deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.stats-counter .counter {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #28a745, #218838);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #28a745;
+  letter-spacing: 1px;
+  font-family: 'PT Sans', sans-serif;
+}
+.stats-counter .stat-box p {
+  font-size: 1.08rem;
+  color: #218838;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .stats-counter .stat-box { min-height: 180px; }
+  .stats-counter .counter { font-size: 2rem; }
+}
+@media (max-width: 767px) {
+  .stats-counter { padding: 40px 0 30px 0; }
+  .stats-counter .stat-box { padding: 28px 10px 18px 10px; }
+  .stats-counter .counter { font-size: 1.5rem; }
+}
+</style>
+    <section class="stats-counter py-5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="inner-title text-center mb-5">
+      <span class="badge">Our Achievements</span>
+      <h2>Hospital Statistics</h2>
+      <p>A Glimpse into Our Impact and Growth</p>
+      <div class="heading-line"></div>
+    </div>
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="stat-box">
+          <i class="fas fa-procedures"></i>
+          <div class="counter">470</div>
+              <p>Successful Surgeries</p>
         </div>
-    </section>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="stat-box">
+          <i class="fas fa-user-md"></i>
+          <div class="counter">17</div>
+          <p>Qualified Doctors</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="stat-box">
+          <i class="fas fa-smile-beam"></i>
+          <div class="counter">4,850</div>
+          <p>Happy Patients</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="stat-box">
+          <i class="fas fa-award"></i>
+          <div class="counter">9</div>
+          <p>Years of Service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ################# News & Updates Preview Section #######################-->
+    <style>
+.news-preview {
+  background: #f8f9fa;
+  padding: 60px 0 40px 0;
+}
+.news-preview .inner-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+.news-preview .inner-title p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+.news-preview .heading-line {
+  width: 60px;
+  height: 4px;
+  background: #28a745;
+  margin: 0 auto 0 auto;
+  border-radius: 2px;
+}
+.news-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(40,167,69,0.10);
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.news-card:hover {
+  box-shadow: 0 16px 40px rgba(40,167,69,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.news-card .news-content {
+  padding: 24px 20px 18px 20px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.news-card .news-meta {
+  margin-bottom: 8px;
+}
+.news-card .badge {
+  background: #28a745;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 5px 14px;
+  margin-right: 8px;
+}
+.news-card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #218838;
+  margin-bottom: 10px;
+}
+.news-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.news-item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(40,167,69,0.08);
+  padding: 18px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.news-item:hover {
+  box-shadow: 0 8px 24px rgba(40,167,69,0.14);
+  transform: translateY(-2px) scale(1.01);
+}
+.news-item i {
+  font-size: 1.7rem;
+  color: #28a745;
+  margin-right: 10px;
+}
+.news-item h6 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #218838;
+  margin-bottom: 4px;
+}
+.news-item p {
+  color: #555;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
+.news-item small {
+  color: #28a745;
+  font-size: 0.92rem;
+}
+@media (max-width: 991px) {
+  .news-card img { height: 180px; }
+}
+@media (max-width: 767px) {
+  .news-preview { padding: 30px 0 20px 0; }
+  .news-card img { height: 140px; }
+  .news-card .news-content { padding: 16px 10px 12px 10px; }
+}
+</style>
     <section class="news-preview py-5">
-        <div class="container">
-            <div class="inner-title text-center mb-5">
-                <span class="badge badge-success p-2 mb-2">Hospital News</span>
-                <h2>Latest News & Updates</h2>
-                <p>Stay informed about hospital developments and healthcare innovations</p>
-                <div class="heading-line bg-success mx-auto"></div>
+  <div class="container">
+    <div class="inner-title text-center mb-5">
+      <span class="badge badge-success p-2 mb-2">Hospital News</span>
+      <h2>Latest News & Updates</h2>
+      <p>Stay informed about hospital developments and healthcare innovations</p>
+      <div class="heading-line bg-success mx-auto"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="news-card">
+          <img src="assets/images/news/news1.jpg" alt="New Cardiac Wing">
+          <div class="news-content">
+            <div class="news-meta mb-2">
+              <span class="badge">Breaking News</span>
+              <small class="text-muted ml-2">July 10, 2025</small>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="featured-news bg-white rounded shadow-sm overflow-hidden">
-                        <img src="assets/images/news/new-cardiac-wing.jpg" alt="New Cardiac Wing" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
-                        <div class="news-content p-4">
-                            <div class="news-meta mb-2">
-                                <span class="badge badge-danger">Breaking News</span>
-                                <small class="text-muted ml-2">July 10, 2025</small>
-                            </div>
-                            <h5 class="mb-3">New Cardiac Surgery Wing Opens</h5>
-                            <p class="text-muted mb-3">State-of-the-art cardiac surgery facility now operational with latest technology and equipment...</p>
-                            <a href="news-updates.php" class="btn btn-success">Read Full Story</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="news-list">
-                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-calendar-plus text-success mr-3 mt-1"></i>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">New Online Appointment System</h6>
-                                    <p class="text-muted small mb-1">Book appointments 24/7 through our enhanced online portal</p>
-                                    <small class="text-success">July 8, 2025</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-user-md text-info mr-3 mt-1"></i>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">Free Health Screening Camp - July 15th</h6>
-                                    <p class="text-muted small mb-1">Comprehensive health check-ups for community members</p>
-                                    <small class="text-success">July 6, 2025</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-award text-warning mr-3 mt-1"></i>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">Hospital Accreditation Renewed</h6>
-                                    <p class="text-muted small mb-1">Successfully renewed Joint Commission accreditation</p>
-                                    <small class="text-success">July 5, 2025</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="news-item bg-white rounded shadow-sm p-3 mb-3">
-                            <div class="d-flex align-items-start">
-                                <i class="fas fa-mobile-alt text-primary mr-3 mt-1"></i>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">Mobile Health App Launch</h6>
-                                    <p class="text-muted small mb-1">New mobile app for patient services now available</p>
-                                    <small class="text-success">June 28, 2025</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mt-3">
-                        <a href="news-updates.php" class="btn btn-outline-success">View All News</a>
-                    </div>
-                </div>
-            </div>
+            <h5>New Cardiac Surgery Wing Opens</h5>
+            <p>
+              State-of-the-art cardiac surgery facility now operational with latest technology and equipment. The new wing features advanced operating theaters, a dedicated cardiac ICU, and a team of highly skilled surgeons and support staff. Patients will benefit from minimally invasive procedures, faster recovery times, and access to the latest innovations in cardiac care. This expansion marks a major milestone in our commitment to providing world-class healthcare to the community.
+            </p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-lg-6">
+        <div class="news-list">
+          <div class="news-item">
+            <i class="fas fa-calendar-plus"></i>
+            <div>
+              <h6>New Online Appointment System</h6>
+              <p>Book appointments 24/7 through our enhanced online portal</p>
+              <small>July 8, 2025</small>
+            </div>
+          </div>
+          <div class="news-item">
+            <i class="fas fa-user-md text-info"></i>
+            <div>
+              <h6>Free Health Screening Camp - July 15th</h6>
+              <p>Comprehensive health check-ups for community members</p>
+              <small>July 6, 2025</small>
+            </div>
+          </div>
+          <div class="news-item">
+            <i class="fas fa-award text-warning"></i>
+            <div>
+              <h6>Hospital Accreditation Renewed</h6>
+              <p>Successfully renewed Joint Commission accreditation</p>
+              <small>July 5, 2025</small>
+            </div>
+          </div>
+          <div class="news-item">
+            <i class="fas fa-mobile-alt text-primary"></i>
+            <div>
+              <h6>Mobile Health App Launch</h6>
+              <p>New mobile app for patient services now available</p>
+              <small>June 28, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ################# Testimonials Section Starts Here #######################-->
     <section class="testimonials-section py-5">
@@ -507,7 +739,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <p class="text-muted">"The care I received at Thushari Vision House was exceptional. The doctors were knowledgeable, compassionate, and always available to answer my questions. I felt truly cared for throughout my treatment."</p>
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
-                            <img src="assets/images/testimonials/patient-1.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
+                            <img src="assets/images/testimonials/patient1.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0">Sarah Johnson</h6>
                                 <small class="text-muted">Heart Surgery Patient</small>
@@ -522,7 +754,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <p class="text-muted">"From the moment I walked in, I was impressed by the cleanliness, organization, and professionalism. The staff went above and beyond to ensure my comfort and quick recovery."</p>
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
-                            <img src="assets/images/testimonials/patient-2.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
+                            <img src="assets/images/testimonials/patient2.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0">Michael Chen</h6>
                                 <small class="text-muted">Orthopedic Patient</small>
@@ -537,7 +769,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <p class="text-muted">"The neurology department here is outstanding. Dr. Rajput and her team provided excellent care for my condition. I'm grateful for their expertise and dedication."</p>
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
-                            <img src="assets/images/testimonials/patient-3.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
+                            <img src="assets/images/testimonials/patient3.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
                                 <h6 class="mb-0">Emily Rodriguez</h6>
                                 <small class="text-muted">Neurology Patient</small>
@@ -550,22 +782,16 @@ echo "<script>window.location.href ='index.php'</script>";
     </section>
 
     <!-- ################# Call to Action Section Starts Here #######################-->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <div class="cta-content">
-                        <h2 class="text-white mb-3">Your Health Can't Wait</h2>
-                        <p class="text-white mb-4">Schedule your appointment today and take the first step towards better health. Our team of specialists is ready to provide you with the highest quality care tailored to your individual needs.</p>
-                        <div class="cta-buttons">
-                            <a href="../src/hms/user-login.php" class="btn btn-light btn-lg">Book an Appointment</a>
-                            <a href="contact.php" class="btn btn-outline-light btn-lg ml-3">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="cta-section">
+  <div class="cta-glass">
+    <h2>Your Health Can't Wait</h2>
+    <p>Schedule your appointment today and take the first step towards better health. Our team of specialists is ready to provide you with the highest quality care tailored to your individual needs.</p>
+    <div class="cta-buttons">
+      <a href="../src/hms/user-login.php" class="btn btn-light btn-lg">Book an Appointment</a>
+      <a href="contact.php" class="btn btn-outline-light btn-lg ml-3">Contact Us</a>
+    </div>
+  </div>
+</section>
 
     <!-- ################# Footer Starts Here#######################--->
     <footer class="footer">
@@ -605,7 +831,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             <div><?php echo $row['PageDescription']; ?></div>
                         </li>
                         <li>
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-phone"></i>
                             <div><?php echo $row['MobileNumber']; ?></div>
                         </li>
                         <li>
@@ -660,55 +886,38 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         setActiveHomeLink();
     });
-
-    // Counter animation script
-    var counted = 0;
-    // Check if the stats-counter element exists to prevent errors if it's not on the page
-    if ($('.stats-counter').length) { 
-        $(window).scroll(function() {
-            // Check if offset is available (element is visible and in DOM)
-            var statsCounterOffsetTop = $('.stats-counter').offset() ? $('.stats-counter').offset().top : null;
-            if (statsCounterOffsetTop !== null) {
-                var oTop = statsCounterOffsetTop - window.innerHeight;
-                if (counted === 0 && $(window).scrollTop() > oTop) {
-                    $('.counter').each(function() {
-                        var $this = $(this),
-                            countTo = $this.attr('data-count');
-                        // Ensure countTo is a valid number, default to 0 if not
-                        var targetCount = parseFloat(String(countTo).replace(/,/g, ''));
-                        if (isNaN(targetCount)) {
-                            targetCount = 0;
-                        }
-
-                        // Ensure current text is a valid number, default to 0 if not
-                        var currentCount = parseFloat(String($this.text()).replace(/,/g, ''));
-                        if (isNaN(currentCount)) {
-                            currentCount = 0;
-                        }
-
-                        $({ countNum: currentCount }).animate({
-                            countNum: targetCount
-                        }, {
-                            duration: 2000, // Animation duration
-                            easing: 'swing', // Animation easing
-                            step: function() {
-                                $this.text(Math.floor(this.countNum));
-                            },
-                            complete: function() {
-                                // Format with commas if the original number had them or if desired
-                                // For simplicity, just setting the final number
-                                $this.text(this.countNum); 
-                                // Example with comma formatting:
-                                // $this.text(this.countNum.toLocaleString());
-                            }
-                        });
-                    });
-                    counted = 1; // Ensure animation runs only once
-                }
-            }
-        });
-    }
 });
+</script>
+<script>
+(function($){
+  var statsAnimated = false;
+  function animateStats() {
+    var statsSection = $('.stats-counter');
+    if (!statsSection.length) return;
+    var sectionTop = statsSection.offset().top;
+    var windowBottom = $(window).scrollTop() + $(window).height();
+    if (!statsAnimated && windowBottom > sectionTop + 60) {
+      $('.counter').each(function() {
+        var $this = $(this);
+        var target = parseInt($this.attr('data-target'));
+        $this.text('0');
+        $({ countNum: 0 }).animate({ countNum: target }, {
+          duration: 1800,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum).toLocaleString());
+          },
+          complete: function() {
+            $this.text(target.toLocaleString());
+          }
+        });
+      });
+      statsAnimated = true;
+    }
+  }
+  $(window).on('scroll', animateStats);
+  $(document).ready(animateStats);
+})(jQuery);
 </script>
 <script src="assets/js/script.js"></script>
 <script>
@@ -734,54 +943,6 @@ $(document).ready(function() {
         $(window).on('scroll', function() {
             setActiveHomeLink();
         });
-
-        // Counter animation script
-        var counted = 0;
-        // Check if the stats-counter element exists to prevent errors if it's not on the page
-        if ($('.stats-counter').length) { 
-            $(window).scroll(function() {
-                // Check if offset is available (element is visible and in DOM)
-                var statsCounterOffsetTop = $('.stats-counter').offset() ? $('.stats-counter').offset().top : null;
-                if (statsCounterOffsetTop !== null) {
-                    var oTop = statsCounterOffsetTop - window.innerHeight;
-                    if (counted === 0 && $(window).scrollTop() > oTop) {
-                        $('.counter').each(function() {
-                            var $this = $(this),
-                                countTo = $this.attr('data-count');
-                            // Ensure countTo is a valid number, default to 0 if not
-                            var targetCount = parseFloat(String(countTo).replace(/,/g, ''));
-                            if (isNaN(targetCount)) {
-                                targetCount = 0;
-                            }
-
-                            // Ensure current text is a valid number, default to 0 if not
-                            var currentCount = parseFloat(String($this.text()).replace(/,/g, ''));
-                            if (isNaN(currentCount)) {
-                                currentCount = 0;
-                            }
-
-                            $({ countNum: currentCount }).animate({
-                                countNum: targetCount
-                            }, {
-                                duration: 2000, // Animation duration
-                                easing: 'swing', // Animation easing
-                                step: function() {
-                                    $this.text(Math.floor(this.countNum));
-                                },
-                                complete: function() {
-                                    // Format with commas if the original number had them or if desired
-                                    // For simplicity, just setting the final number
-                                    $this.text(this.countNum); 
-                                    // Example with comma formatting:
-                                    // $this.text(this.countNum.toLocaleString());
-                                }
-                            });
-                        });
-                        counted = 1; // Ensure animation runs only once
-                    }
-                }
-            });
-        }
     });
     </script>
 </body>
