@@ -194,6 +194,14 @@
   transform: rotate(90deg);
 }
 
+/* Footer Contact Icons */
+.footer-contact i {
+  color: #27ae60 !important; /* Material green, matches other icons */
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
   .nav-item ul li {
