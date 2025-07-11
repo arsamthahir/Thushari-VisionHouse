@@ -45,6 +45,7 @@
   width: 100%;
   height: 300px;
   overflow: hidden;
+  margin-bottom: 60px;  /* Increased bottom margin */
 }
 
 .services-banner img {
@@ -326,6 +327,23 @@
   animation-delay: 0.9s;
 }
 
+/* Pulse animation for icons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated.pulse {
+  animation: pulse 1s infinite;
+}
+
 /* Service Box Animations */
 .animated-service {
   opacity: 0;
@@ -352,7 +370,173 @@
   animation-delay: 0.6s;
 }
 
-/* Responsive Design */
+/* Enhanced Key Features Section */
+.key-features {
+  padding: 80px 0 60px;  /* Increased top and bottom padding */
+  background: #f8f9fa;
+  margin-bottom: 30px;  /* Add margin at bottom */
+}
+
+.key-features .inner-title {
+  margin-bottom: 50px;  /* Increase spacing after title */
+}
+
+.key-features .row {
+  margin-bottom: 20px;  /* Add space between rows */
+}
+
+.key-features .row > div {
+  margin-bottom: 30px;  /* Add space between columns on mobile */
+}
+
+/* Section subtitle styling for professional layout */
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 15px auto 0 ;
+  max-width: 700px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Additional Services Section spacing */
+.our-services {
+  padding: 80px 0 60px;  /* Match key-features padding */
+  background: #fff;  /* Different background for visual separation */
+  margin-top: 30px;  /* Add margin at top */
+}
+
+/* Add divider between sections */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.5), transparent);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Badge and heading line styles */
+.badge-success {
+  background-color: #28a745;
+  color: white;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.heading-line {
+  width: 80px;
+  height: 3px;
+  background: #28a745;
+  margin: 20px auto 30px;
+  display: block;
+}
+
+.single-key {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border-bottom: 4px solid #28a745;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+}
+
+.single-key:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.15) 100%);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.single-key:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.single-key:hover:before {
+  height: 100%;
+}
+
+.single-key i {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.single-key:hover i {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.single-key h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.single-key p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Service box animations */
+.service-box {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px; /* Increase bottom margin */
+  border-left: 4px solid #28a745;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-box i {
+  font-size: 2.5rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover i {
+  transform: scale(1.1);
+}
+
+.service-box h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-box p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Media queries for responsive design */
 @media (max-width: 992px) {
   .page-title {
     padding: 60px 0 40px 0;
@@ -502,6 +686,23 @@
   animation-delay: 0.9s;
 }
 
+/* Pulse animation for icons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated.pulse {
+  animation: pulse 1s infinite;
+}
+
 /* Service Box Animations */
 .animated-service {
   opacity: 0;
@@ -528,4 +729,19 @@
   animation-delay: 0.6s;
 }
 
-/* Media queries for responsive design */
+/* Service box specific spacing */
+.service-box {
+  margin-bottom: 40px;  /* Increase bottom margin */
+}
+
+/* Row spacing in services sections */
+.our-services .row > div {
+  margin-bottom: 30px;  /* Add space between columns on mobile */
+}
+
+/* Ensure proper spacing between service groups */
+.service-group {
+  margin-bottom: 40px;
+}
+
+/* Media queries */
