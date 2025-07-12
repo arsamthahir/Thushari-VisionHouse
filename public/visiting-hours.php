@@ -680,7 +680,7 @@ include_once('../src/hms/include/config.php');
                                 <h5 class="text-success"><i class="fas fa-check-circle mr-2"></i>What to Bring</h5>
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-id-card text-muted mr-2"></i>Valid photo identification</li>
-                                    <li><i class="fas fa-hand-sanitizer text-muted mr-2"></i>Personal hand sanitizer (optional)</li>
+                                    <li><i class="fas fa-pump-soap text-muted mr-2"></i>Personal hand sanitizer (optional)</li>
                                     <li><i class="fas fa-mask text-muted mr-2"></i>Face mask (required)</li>
                                     <li><i class="fas fa-mobile-alt text-muted mr-2"></i>Mobile phone on silent mode</li>
                                 </ul>
