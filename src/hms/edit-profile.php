@@ -40,7 +40,9 @@ $msg="Your Profile updated Successfully";
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
+		<link rel="stylesheet" href="../../public/assets/css/sidebar.css" />
+		<link rel="stylesheet" href="../../public/assets/css/header.css" />
+		<link rel="stylesheet" href="assets/css/dashboard.css" />
 
 	</head>
 	<body>
@@ -51,38 +53,32 @@ $msg="Your Profile updated Successfully";
 						<?php include('include/header.php');?>
 						
 				<!-- end: TOP NAVBAR -->
-				<div class="main-content" >
-					<div class="wrap-content container" id="container">
-						<!-- start: PAGE TITLE -->
-						<section id="page-title">
-							<div class="row">
-								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Edit Profile</h1>
-																	</div>
+				<div class="main-content">
+					<div class="dashboard-container">
+						<!-- Page Title -->
+						<div class="page-title">
+							<h1 class="mainTitle">Edit Your Profile</h1>
+							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb">
-									<li>
-										<span>User </span>
-									</li>
-									<li class="active">
-										<span>Edit Profile</span>
-									</li>
+									<li class="breadcrumb-item"><span>User</span></li>
+									<li class="breadcrumb-item active"><span>Edit Profile</span></li>
 								</ol>
-							</div>
-						</section>
-						<!-- end: PAGE TITLE -->
-						<!-- start: BASIC EXAMPLE -->
-						<div class="container-fluid container-fullw bg-white">
-							<div class="row">
-								<div class="col-md-12">
-<h5 style="color: green; font-size:18px; ">
-<?php if($msg) { echo htmlentities($msg);}?> </h5>
-									<div class="row margin-top-30">
-										<div class="col-lg-8 col-md-12">
-											<div class="panel panel-white">
-												<div class="panel-heading">
-													<h5 class="panel-title">Edit Profile</h5>
-												</div>
-												<div class="panel-body">
+							</nav>
+						</div>
+
+						<!-- Profile Edit Form -->
+						<div class="content-wrapper">
+							<?php if($msg) { ?>
+								<div class="alert alert-success">
+									<?php echo htmlentities($msg);?>
+								</div>
+							<?php } ?>
+							
+							<div class="profile-card">
+								<div class="profile-header">
+									<h2>Edit Profile</h2>
+								</div>
+								<div class="profile-body">
 									<?php 
 $sql=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
 while($data=mysqli_fetch_array($sql))

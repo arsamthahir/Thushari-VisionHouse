@@ -1,0 +1,125 @@
+/* TVH Header Styles */
+.navbar-default {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px; /* Match sidebar width */
+}
+
+.navbar-brand h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-right h2 {
+    color: #1565c0;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #1565c0;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #1976d2;
+    background-color: rgba(25, 118, 210, 0.05);
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.dropdown-menu > li > a {
+    padding: 8px 20px;
+    color: #444;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: rgba(25, 118, 210, 0.05);
+    color: #1565c0;
+}
+
+.current-user > a {
+    display: flex;
+    align-items: center;
+    padding: 15px !important;
+}
+
+.current-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: 500;
+    color: #1565c0;
+}
+
+/* Adjustments for collapsed sidebar */
+.app-sidebar-closed .navbar-brand {
+    width: 70px;
+    position: relative;
+}
+
+.app-sidebar-closed .navbar-header {
+    width: 70px;
+}
+
+.app-sidebar-closed .navbar-nav {
+    margin-left: 70px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-header {
+        background: #ffffff;
+    }
+    
+    .navbar-collapse {
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .app-sidebar-closed .navbar-brand,
+    .app-sidebar-closed .navbar-header {
+        width: auto;
+    }
+    
+    .app-sidebar-closed .navbar-nav {
+        margin-left: 0;
+    }
+    
+    .app-sidebar-closed .toggle-sidebar {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

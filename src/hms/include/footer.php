@@ -1,10 +1,12 @@
 <footer>
-				<div class="footer-inner">
-					<div class="pull-left">
-			<span class="text-bold text-uppercase">Thushari Vision House</span>
-					</div>
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="text-bold text-uppercase">Thushari Vision House</span>
+        </div>
+        <div class="footer-actions">
+            <span class="go-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <i class="fa fa-chevron-up"></i>
+            </span>
+        </div>
+    </div>
+</footer>
