@@ -1,14 +1,35 @@
 <?php
 session_start();
 include('include/config.php');
-$_SESSION['login']=="";
-date_default_timezone_set('Asia/Kolkata');
-$ldate=date( 'd-m-Y h:i:s A', time () );
-mysqli_query($con,"UPDATE userlog  SET logout = '$ldate' WHERE uid = '".$_SESSION['id']."' ORDER BY id DESC LIMIT 1");
+
+// Check if user is logged in
+if (isset($_SESSION['id'])) {
+    // Update logout time
+    date_default_timezone_set('Asia/Kolkata');
+    $ldate = date('Y-m-d H:i:s');
+    
+    // Use prepared statement for security
+    $stmt = mysqli_prepare($con, "UPDATE userlog SET logout = ? WHERE uid = ? ORDER BY id DESC LIMIT 1");
+    mysqli_stmt_bind_param($stmt, "si", $ldate, $_SESSION['id']);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+
+// Clear all session variables
 session_unset();
-//session_destroy();
-$_SESSION['errmsg']="You have successfully logout";
+// Destroy the session
+session_destroy();
+
+// Clear session cookie
+if (isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time()-3600, '/');
+}
+
+// Set logout message in a new session
+session_start();
+$_SESSION['errmsg'] = "You have successfully logged out";
+
+// Redirect to login page using proper path
+header("Location: ../../public/login.php");
+exit();
 ?>
-<script language="javascript">
-document.location="../index.php";
-</script>
