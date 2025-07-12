@@ -19,7 +19,8 @@ echo "<script>window.location.href ='contact.php'</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Thushari Vision House - Contact Us</title>    <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
@@ -263,28 +264,56 @@ echo "<script>window.location.href ='contact.php'</script>";
         }
         
         .option-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(40, 167, 69, 0.08);
-            border-radius: 12px;
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(32, 201, 151, 0.08) 100%);
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.05);
-            border: 1px solid rgba(40, 167, 69, 0.1);
+            margin-right: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.08);
+            border: 2px solid rgba(40, 167, 69, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option-icon::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border-radius: 15px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 0;
         }
         
         .appointment-option:hover .option-icon {
-            background: rgba(40, 167, 69, 0.15);
-            transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(40, 167, 69, 0.1);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.15);
+            border-color: rgba(40, 167, 69, 0.3);
+        }
+        
+        .appointment-option:hover .option-icon::before {
+            opacity: 0.1;
         }
         
         .option-icon i {
-            font-size: 22px;
+            font-size: 24px;
             color: #28a745;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+        
+        .appointment-option:hover .option-icon i {
+            color: #218838;
+            transform: scale(1.1);
         }
         
         .option-text {
@@ -687,7 +716,7 @@ echo "<script>window.location.href ='contact.php'</script>";
     <section class="map-section">
         <div class="container">
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467128223!2d79.8950805142855!3d6.914682920397366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259bb2f20f249%3A0x48702bd7a6c09d12!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1621507426238!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15868.148618992686!2d81.0532714!3d6.8091323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5bd3fdd4884b9%3A0xf572f81854c6f97e!2sThushari%20Vision%20House!5e0!3m2!1sen!2slk!4v1707725348749!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>    <!-- ################# Footer Starts Here #######################-->
