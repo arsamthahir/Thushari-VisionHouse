@@ -108,7 +108,7 @@ $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,
 										while($row=mysqli_fetch_array($ret))
 										{
 										?>
-										<option value="<?php echo htmlentities($row['specilization']);?>
+										<option value="<?php echo htmlentities($row['specilization']);?>">
 											<?php echo htmlentities($row['specilization']);?>
 										</option>
 										<?php } ?>
@@ -134,12 +134,21 @@ $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,
 
 								<div class="form-group">
 									<label for="Appointmenttime">Time</label>
-									<input class="form-control timepicker" name="apptime" required="required">
+									<div class="input-group">
+										<input type="text" class="form-control timepicker" name="apptime" id="apptime" required="required" autocomplete="off">
+										<div class="input-group-append">
+											<span class="input-group-text" onclick="$('#apptime').timepicker('showWidget')">
+												<i class="fa fa-clock-o"></i>
+											</span>
+										</div>
+									</div>
 								</div>
 
-								<button type="submit" name="submit" class="btn btn-primary">
-									Submit
-								</button>
+								<div class="form-group submit-group">
+									<button type="submit" name="submit" class="btn btn-primary" style="margin-bottom: 20px;">
+										<i class="fa fa-calendar-check-o"></i> Schedule Appointment
+									</button>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -165,14 +174,77 @@ $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,
 		<script>
 			jQuery(document).ready(function() {
 				Main.init();
+
+				// Initialize datepicker
 				$('.datepicker').datepicker({
 					format: 'yyyy-mm-dd',
-					startDate: 'today'
+					startDate: 'today',
+					autoclose: true,
+					todayHighlight: true
 				});
-				$('.timepicker').timepicker({
-					minuteStep: 5,
-					showMeridian: false,
-					defaultTime: false
+
+				// Initialize timepicker
+				$('#apptime').timepicker({
+					minuteStep: 30,
+					showMeridian: true,
+					showInputs: true,
+					defaultTime: '09:00',
+					explicitMode: true,
+					timeFormat: 'HH:ii p'
+				}).on('changeTime.timepicker', function(e) {
+					var meridian = e.time.meridian;
+					var hours = e.time.hours;
+					var minutes = e.time.minutes;
+					$(this).val(hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + meridian);
+				});
+
+				// Form validation
+				$('form[name="book"]').on('submit', function(e) {
+					var specialization = $('select[name="Doctorspecialization"]').val();
+					var doctor = $('select[name="doctor"]').val();
+					var fees = $('select[name="fees"]').val();
+					var date = $('input[name="appdate"]').val();
+					var time = $('input[name="apptime"]').val();
+
+					// Clear previous error states
+					$('.form-group').removeClass('has-error');
+					$('.error-message').remove();
+
+					if (!specialization || !doctor || !fees || !date || !time) {
+						e.preventDefault();
+						
+						if (!specialization) {
+							showError('select[name="Doctorspecialization"]', 'Please select a specialization');
+						}
+						if (!doctor) {
+							showError('select[name="doctor"]', 'Please select a doctor');
+						}
+						if (!fees) {
+							showError('select[name="fees"]', 'Please wait for consultancy fees to load');
+						}
+						if (!date) {
+							showError('input[name="appdate"]', 'Please select an appointment date');
+						}
+						if (!time) {
+							showError('input[name="apptime"]', 'Please select an appointment time');
+						}
+						return false;
+					}
+					return true;
+				});
+
+				// Helper function to show error messages
+				function showError(selector, message) {
+					var element = $(selector);
+					element.closest('.form-group').addClass('has-error');
+					element.after('<div class="error-message">' + message + '</div>');
+				}
+
+				// Auto-refresh fees when doctor changes
+				$('#doctor').on('change', function() {
+					if ($(this).val()) {
+						getfee($(this).val());
+					}
 				});
 			});
 		</script>

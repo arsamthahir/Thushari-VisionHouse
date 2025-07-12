@@ -3,7 +3,61 @@
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin: 20px 0 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.dashboard-container {
+    min-height: calc(100vh - 180px);
+    padding-bottom: 60px;
+    position: relative;
+}
+
+/* Time picker specific styles */
+.bootstrap-timepicker-widget.dropdown-menu {
+    z-index: 1050;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 10px;
+    width: 200px !important;
+    margin: 2px 0 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.bootstrap-timepicker-widget table {
+    width: 100%;
+}
+
+.bootstrap-timepicker-widget table td {
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 2px;
+}
+
+.bootstrap-timepicker-widget table td a {
+    border: 1px transparent solid;
+    width: 100%;
+    display: inline-block;
+    padding: 4px 0;
+    outline: 0;
+    color: #333;
+}
+
+.bootstrap-timepicker-widget table td a:hover {
+    background-color: #eee;
+    border-color: #ddd;
+    border-radius: 4px;
+}
+
+.bootstrap-timepicker-widget table td input {
+    width: 35px;
+    margin: 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 .form-group {
@@ -35,17 +89,119 @@ select.form-control {
     height: 42px;
 }
 
+.submit-group {
+    margin-top: 30px;
+}
+
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: all 0.2s;
+    color: white;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.has-error .form-control {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Time picker specific styles */
+.bootstrap-timepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.bootstrap-timepicker-widget table td a {
+    padding: 8px;
+    border-radius: 4px;
+    color: #495057;
+}
+
+.bootstrap-timepicker-widget table td a:hover {
+    background-color: #f8f9fa;
+}
+
+.bootstrap-timepicker .input-group-append .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-left: none;
+    cursor: pointer;
+}
+
+.bootstrap-timepicker .input-group-append .input-group-text:hover {
+    background-color: #e9ecef;
+}
+
+/* Time picker styling */
+.bootstrap-timepicker-widget table td input {
+    width: 40px;
+    padding: 4px 6px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.bootstrap-timepicker-widget table td a {
+    padding: 4px 0;
+    color: #007bff;
+}
+
+.bootstrap-timepicker-widget table td a:hover {
+    background-color: #f8f9fa;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.timepicker-container {
+    position: relative;
+}
+
+/* Form validation styles */
+.form-control.error {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Disabled state for readonly fields */
+select[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .alert {
