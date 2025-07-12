@@ -96,7 +96,7 @@ echo "<script>window.location.href='user-login.php'</script>";
 					</form>
 
 					<div class="copyright">
-						</span><span class="text-bold text-uppercase"> Hospital Management System</span>.
+						</span><span class="text-bold text-uppercase">Thushari Vision House</span>.
 					</div>
 			
 				</div>

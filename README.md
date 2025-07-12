@@ -50,14 +50,14 @@ TVH Hospital Management System is a comprehensive web-based application designed
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/hospital-management-system.git
+git clone https://github.com/yourusername/thushari-vision-house.git
 ```
 
 2. Set up the database
 
 ```bash
 # Import the database schema
-mysql -u username -p < database/hms.sql
+mysql -u username -p < database/tvh.sql
 ```
 
 3. Configure database connection
