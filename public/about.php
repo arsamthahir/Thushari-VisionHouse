@@ -320,14 +320,14 @@ include_once('../src/hms/include/config.php');
                     </div>
                     
                     <!-- Future Vision Call-to-Action -->
-                    <div class="future-vision text-center mt-5 pt-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- <div class="future-vision text-center mt-5 pt-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="vision-card p-4 bg-white shadow-sm rounded">
                             <h3 class="text-success">Looking to the Future</h3>
                             <p class="lead mb-3">Our journey continues with a commitment to innovation and exceptional patient care.</p>
                             <p class="mb-4">As we look ahead, Thushari Vision House remains dedicated to expanding our services, embracing cutting-edge technologies, and strengthening our community partnerships to meet the evolving healthcare needs of our region.</p>
                             <a href="contact.php" class="btn btn-success px-4 py-2">Connect With Us</a>
                         </div>
-                    </div>
+                    </div> -->
                     </div>
                 </div>
             </div>
