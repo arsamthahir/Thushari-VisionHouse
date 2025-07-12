@@ -14,10 +14,45 @@ include_once('../src/hms/include/config.php');
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/header-extensions.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nav-center-fix.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/gallery.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" type="text/css" href="assets/css/testimonials.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/about.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="assets/css/gap-fix.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Critical inline style to fix gap */
+        header { margin: 0 !important; padding: 0 !important; font-size: 0 !important; }
+        body { overflow-x: hidden; }
+        
+        /* Fix for mission and vision boxes */
+        .mission-box {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none;
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+            border-left: 5px solid #008e4c;
+            margin-bottom: 20px;
+        }
+        
+        /* Fix for timeline items */
+        .timeline-item {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+        }
+        
+        /* Fix for doctor boxes */
+        .doctor-box {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -285,14 +320,14 @@ include_once('../src/hms/include/config.php');
                     </div>
                     
                     <!-- Future Vision Call-to-Action -->
-                    <div class="future-vision text-center mt-5 pt-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- <div class="future-vision text-center mt-5 pt-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="vision-card p-4 bg-white shadow-sm rounded">
                             <h3 class="text-success">Looking to the Future</h3>
                             <p class="lead mb-3">Our journey continues with a commitment to innovation and exceptional patient care.</p>
                             <p class="mb-4">As we look ahead, Thushari Vision House remains dedicated to expanding our services, embracing cutting-edge technologies, and strengthening our community partnerships to meet the evolving healthcare needs of our region.</p>
                             <a href="contact.php" class="btn btn-success px-4 py-2">Connect With Us</a>
                         </div>
-                    </div>
+                    </div> -->
                     </div>
                 </div>
             </div>
@@ -372,45 +407,121 @@ include_once('../src/hms/include/config.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        // Initialize WOW.js for animations
-        new WOW().init({
-            mobile: false, // Disable on mobile devices
-            offset: 100    // Offset (in px) from the bottom of the viewport
+        // Initialize WOW.js with proper settings for animations
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 50,
+            mobile: true,
+            live: false
+        }).init();
+        
+        // Header active link management and other initializations
+        $(document).ready(function() {
+            function setActiveAboutLink() {
+                var currentPage = window.location.pathname.split("/").pop();
+                // Check if it's about.php or with a hash
+                if (currentPage === 'about.php' || currentPage.startsWith('about.php#')) {
+                    $('#menu ul li a').removeClass('active');
+                    $('#menu ul li a[href="about.php"]').addClass('active');
+                }
+            }
+            // Set active link on page load
+            setActiveAboutLink();
+
+            // Enforce active link on scroll
+            $(window).on('scroll', function() {
+                setActiveAboutLink();
+            });
+            
+            // Manually trigger animations for key elements
+            $('.mission-box').addClass('animated').css({
+                'opacity': '1',
+                'visibility': 'visible'
+            });
+            
+            $('.timeline-item').addClass('animated').css({
+                'opacity': '1',
+                'visibility': 'visible'
+            });
+            
+            $('.doctor-box').addClass('animated').css({
+                'opacity': '1',
+                'visibility': 'visible'
+            });
+            
+            // Add hover effects for mission boxes
+            $('.mission-box').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-5px)');
+                },
+                function() {
+                    $(this).css('transform', 'none');
+                }
+            );
         });
         
-        // Additional script for timeline scroll animations
+        // Additional script for timeline and mission/vision animations
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all timeline items
+            // Immediately apply animations to all relevant elements
+            
+            // Mission and Vision boxes
+            const missionBoxes = document.querySelectorAll('.mission-box');
+            missionBoxes.forEach(box => {
+                // Force visibility and animation
+                box.style.opacity = "1";
+                box.style.visibility = "visible";
+                box.classList.add('animated');
+                
+                // Get the animation class from wow attribute if it exists
+                if (box.classList.contains('wow')) {
+                    const animClass = box.getAttribute('data-wow-class') || box.classList.contains('fadeInLeft') ? 'fadeInLeft' : 'fadeInRight';
+                    box.classList.add(animClass);
+                }
+            });
+            
+            // Timeline items
             const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                // Force visibility
+                item.style.opacity = "1";
+                item.style.visibility = "visible";
+                item.classList.add('show-timeline', 'animated');
+                
+                // Add appropriate animation based on even/odd position
+                const animClass = index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight';
+                item.classList.add(animClass);
+            });
             
-            // Function to check if an element is in viewport
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-                    rect.bottom >= 0
-                );
-            }
-            
-            // Function to add show-timeline class to visible items
-            function showVisibleTimelineItems() {
-                timelineItems.forEach(item => {
-                    if (isInViewport(item)) {
-                        item.classList.add('show-timeline');
-                        // Also maintain WOW animations if they exist
-                        if (item.classList.contains('wow')) {
-                            item.classList.add('animated');
-                        }
-                    }
-                });
-            }
-            
-            // Run once on load
-            showVisibleTimelineItems();
-            
-            // Add scroll event listener
-            window.addEventListener('scroll', showVisibleTimelineItems);
+            // Doctor boxes
+            const doctorBoxes = document.querySelectorAll('.doctor-box');
+            doctorBoxes.forEach(box => {
+                box.style.opacity = "1";
+                box.style.visibility = "visible";
+                box.classList.add('animated', 'fadeInUp');
+            });
         });
+        
+        // Additional script to ensure animations are triggered after page load
+        window.onload = function() {
+            // Force re-initialization of WOW
+            new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 50,
+                mobile: true,
+                live: false
+            }).init();
+            
+            // Manually trigger animations
+            document.querySelectorAll('.wow').forEach(function(element) {
+                element.classList.add('animated');
+                // Add appropriate animation class based on data attribute
+                if (element.getAttribute('data-wow-animation')) {
+                    element.classList.add(element.getAttribute('data-wow-animation'));
+                }
+            });
+        }
     </script>
 </body>
 
