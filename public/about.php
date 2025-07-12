@@ -156,7 +156,7 @@ include_once('../src/hms/include/config.php');
                 <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc1.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -164,7 +164,7 @@ include_once('../src/hms/include/config.php');
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. David Kanuel</h5>
+                            <h5>Dr. Anula Wijesundare</h5>
                             <span class="doctor-speciality">Chief Medical Officer</span>
                             <p class="text-muted small mt-2">Over 15 years of experience in general medicine and healthcare management</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -174,7 +174,7 @@ include_once('../src/hms/include/config.php');
                 <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc2.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -182,7 +182,7 @@ include_once('../src/hms/include/config.php');
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Sanitha Mathews</h5>
+                            <h5>Dr. Sharmila</h5>
                             <span class="doctor-speciality">Cardiologist</span>
                             <p class="text-muted small mt-2">Specializes in advanced cardiac care and interventional procedures</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -192,7 +192,7 @@ include_once('../src/hms/include/config.php');
                 <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc3.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -200,7 +200,7 @@ include_once('../src/hms/include/config.php');
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Meena Rajput</h5>
+                            <h5>Dr. Arun Kulatunga</h5>
                             <span class="doctor-speciality">Neurologist</span>
                             <p class="text-muted small mt-2">Expert in treating complex neurological conditions with precision</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>
@@ -210,7 +210,7 @@ include_once('../src/hms/include/config.php');
                 <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="doctor-box shadow-sm">
                         <div class="doctor-img">
-                            <img src="assets/images/team/doctor-1.jpeg" alt="Doctor" class="img-fluid">
+                            <img src="assets/images/team/doc4.png" alt="Doctor" class="img-fluid">
                             <div class="doctor-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -218,7 +218,7 @@ include_once('../src/hms/include/config.php');
                             </div>
                         </div>
                         <div class="doctor-info p-3">
-                            <h5>Dr. Samuel Kumar</h5>
+                            <h5>Dr. Fathima</h5>
                             <span class="doctor-speciality">Orthopedic Surgeon</span>
                             <p class="text-muted small mt-2">Skilled surgeon specializing in joint replacements and sports injuries</p>
                             <a href="#" class="btn btn-sm btn-outline-success mt-2">View Profile</a>

@@ -741,7 +741,7 @@ echo "<script>window.location.href ='index.php'</script>";
                         <div class="testimonial-author d-flex align-items-center">
                             <img src="assets/images/testimonials/patient1.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
-                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <h6 class="mb-0">Thenushan Thevakumar</h6>
                                 <small class="text-muted">Heart Surgery Patient</small>
                             </div>
                         </div>
@@ -756,7 +756,7 @@ echo "<script>window.location.href ='index.php'</script>";
                         <div class="testimonial-author d-flex align-items-center">
                             <img src="assets/images/testimonials/patient2.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
-                                <h6 class="mb-0">Michael Chen</h6>
+                                <h6 class="mb-0">Janardhika Mahendran</h6>
                                 <small class="text-muted">Orthopedic Patient</small>
                             </div>
                         </div>
@@ -771,7 +771,7 @@ echo "<script>window.location.href ='index.php'</script>";
                         <div class="testimonial-author d-flex align-items-center">
                             <img src="assets/images/testimonials/patient3.jpg" alt="Patient" class="rounded-circle mr-3" width="60" height="60">
                             <div>
-                                <h6 class="mb-0">Emily Rodriguez</h6>
+                                <h6 class="mb-0">Arsam Thahir</h6>
                                 <small class="text-muted">Neurology Patient</small>
                             </div>
                         </div>
