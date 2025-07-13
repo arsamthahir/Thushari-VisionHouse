@@ -83,6 +83,7 @@ echo "<script>window.location.href ='index.php'</script>";
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">                <div class="carousel-item active">
                     <img class="d-block w-100" src="assets/images/slider/slider1.jpg" alt="First slide">
@@ -101,10 +102,22 @@ echo "<script>window.location.href ='index.php'</script>";
                     <div class="carousel-cover"></div>
                     <div class="carousel-caption d-block">
                         <h5 class="animated bounceInDown">Expert Medical Care</h5>
-                        <p class="animated bounceInLeft">Our Experienced Team Is Dedicated to Your Health and Well-being</p>
+                        <p class="animated bounceInLeft">Dedicated to Your Health and Well-being</p>
                         <div class="animated bounceInUp">
                             <a href="services.php" class="btn btn-success">Our Services</a>
                             <a href="contact.php" class="btn btn-outline-light ml-2">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/slider/slider_2.jpg" alt="Third slide">
+                    <div class="carousel-cover"></div>
+                    <div class="carousel-caption d-block">
+                        <h5 class="animated bounceInDown">Advanced Technology</h5>
+                        <p class="animated bounceInLeft">State-of-the-Art Equipment and Modern Medical Facilities</p>
+                        <div class="animated bounceInUp">
+                            <a href="../src/hms/user-login.php" class="btn btn-success">Book Appointment</a>
+                            <a href="gallery.php" class="btn btn-outline-light ml-2">View Gallery</a>
                         </div>
                     </div>
                 </div>
@@ -714,6 +727,33 @@ echo "<script>window.location.href ='index.php'</script>";
               <h6>Mobile Health App Launch</h6>
               <p>New mobile app for patient services now available</p>
               <small>June 28, 2025</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Website Launch News Section -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="news-card" style="flex-direction: row; min-height: 400px;">
+          <div style="flex: 1; display: flex; align-items: center; justify-content: center; background: #f8f9fa; padding: 20px;">
+            <img src="assets/images/team/Team.jpg" alt="Development Team" style="width: 100%; height: 350px; object-fit: contain; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+          </div>
+          <div class="news-content" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+            <div class="news-meta mb-3">
+              <span class="badge" style="background: #007bff; padding: 8px 16px;">Tech News</span>
+              <small class="text-muted ml-2">July 13, 2025</small>
+            </div>
+            <h5 style="color: #218838; font-weight: 700; margin-bottom: 20px; line-height: 1.3;">Hospital Website Successfully Developed by Sabaragamuwa University Students</h5>
+  
+            <p style="color: #666; font-size: 1rem; margin-bottom: 20px;">
+              We are proud to announce the successful launch of our new hospital website, developed by a talented team of undergraduate students from the Faculty of Computing at Sabaragamuwa University. This innovative digital platform features modern design, online appointment booking, patient portals, and comprehensive information about our medical services. The development team has created a user-friendly solution that enhances patient experience and streamlines hospital operations.
+            </p>
+            <div style="background: #e8f5e8; padding: 15px; border-radius: 10px; border-left: 4px solid #28a745;">
+              <p style="margin: 0; color: #155724; font-style: italic; font-size: 0.95rem;">
+                "This collaboration showcases the exceptional skills and dedication of our future IT professionals, bringing cutting-edge technology to healthcare management."
+              </p>
             </div>
           </div>
         </div>
