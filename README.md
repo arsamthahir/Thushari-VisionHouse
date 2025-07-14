@@ -5,6 +5,7 @@
 TVH Hospital Management System is a comprehensive web-based application designed to streamline healthcare operations, improve patient care, and optimize administrative workflows. This project was developed as part of the Information Systems community project at Sabaragamuwa University of Sri Lanka.
 
 ## ✨ Features
+- Appointment Management
 
 ### 🧑‍⚕️ For Patients
 
